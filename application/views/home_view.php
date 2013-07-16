@@ -4,20 +4,8 @@ include('header.php');
 ?>
 
 <!-- topbar ends -->
-<div class="container-fluid">
-    <div class="row-fluid">
 
-        <ul class="breadcrumb">
-            <li>
-                <a href="#">Home</a> <span class="divider">/</span>
-            </li>
-            <li>
-                <a href="#">Blank</a>
-            </li>
-        </ul>
-    </div>
-
-    <!-- the introduction -->
+   <!-- the introduction -->
     <div class="row-fluid">
         <div class="box span12">
             <div class="box-header well">

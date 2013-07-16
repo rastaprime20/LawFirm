@@ -14,7 +14,7 @@
 | path to your installation.
 |
 */
-$config['base_url']	= 'http://3ojters.no-ip.biz/LawFirm/';
+$config['base_url']	= 'http://localhost/LawFirm/';
 
 /*
 |--------------------------------------------------------------------------
@@ -28,7 +28,7 @@ $config['base_url']	= 'http://3ojters.no-ip.biz/LawFirm/';
 */
 
 //$config['modules_locations'] = array(APPPATH.'modules_core/lawfirm' => '../modules_core/lawfirm',);
-$config['index_page'] = 'index.php';
+$config['index_page'] = '';
 
 /*
 |--------------------------------------------------------------------------
