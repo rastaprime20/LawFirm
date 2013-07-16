@@ -3,16 +3,7 @@
 <base href="<?php echo base_url(); ?>">
 <html lang="en">
     <head>
-        <!--
-                Charisma v1.0.0
-
-                Copyright 2012 Muhammad Usman
-                Licensed under the Apache License v2.0
-                http://www.apache.org/licenses/LICENSE-2.0
-
-                http://usman.it
-                http://twitter.com/halalit_usman
-        -->
+        
         <meta charset="utf-8">
         <title>Online Law Firm System</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -45,13 +36,6 @@
         <link href='  css/jquery.iphone.toggle.css' rel='stylesheet'>
         <link href='  css/opa-icons.css' rel='stylesheet'>
         <link href='  css/uploadify.css' rel='stylesheet'>
-
-        <!-- The HTML5 shim, for IE6-8 support of HTML5 elements -->
-        <!--[if lt IE 9]>
-          <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
-
-        <!-- The fav icon -->
         <link rel="shortcut icon" href="  img/favicon.ico">
 
     </head>
@@ -101,9 +85,10 @@
                         <div class="well nav-collapse sidebar-nav">
                             <ul class="nav nav-tabs nav-stacked main-menu">
                                 <li class="nav-header hidden-tablet">Main</li>
-                                <li><a class="ajax-link" href="index.html"><i class="icon-home"></i><span class="hidden-tablet"> Home</span></a></li>
+                                <li><a class="ajax-link" href="<?php base_url();?>home"><i class="icon-home"></i><span class="hidden-tablet"> Home</span></a></li>
                                 <li><a class="ajax-link" href="templates.html"><i class="icon-list-alt"></i><span class="hidden-tablet"> Templates</span></a></li>
                                 <li><a class="ajax-link" href="<?php base_url() ?>user"><i class="icon-user"></i><span class="hidden-tablet"> Accounts</span></a></li>
+                                <li><a class="ajax-link" href="<?php base_url() ?>login"><i class="icon-user"></i><span class="hidden-tablet"> Log out</span></a></li>
                             </ul>
 
                         </div><!--/.well -->
@@ -119,7 +104,7 @@
                             <div class="span12">
                                 <ul class="breadcrumb">
                                     <li>
-                                        <a href="#">Home</a> <span class="divider">/</span>
+                                        <a href="<?php echo base_url();?>home">Home</a> <span class="divider">/</span>
                                     </li>
                                     <li>
                                         <a href="#">Blank</a>
@@ -127,6 +112,7 @@
                                 </ul>
                             </div>
                         </div>
+                    
                        
                     <?php } ?>
                    

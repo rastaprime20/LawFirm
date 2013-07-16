@@ -14,7 +14,7 @@
 | path to your installation.
 |
 */
-$config['base_url']	= 'http://localhost/LawFirm/';
+$config['base_url']	= 'http://3ojters.no-ip.biz/LawFirm/';
 
 /*
 |--------------------------------------------------------------------------

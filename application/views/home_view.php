@@ -81,7 +81,7 @@ include('header.php');
                     <th>Client Name</th>
                     <th>Template Title</th>
                     <th>Created By</th>
-                    <th>Date Created</th>
+                    <th>Date/Time Created</th>
                     <th>Action</th>
                     </tr>
                     </thead>   
@@ -93,7 +93,7 @@ include('header.php');
                             <td class="center">Channister Tatum</td>
                             <td class="center">Civil Case Cover Sheet</td>
                             <td class="center">Tyrone Fernandez</td>							
-                            <td class="center">01/10/2013</td>
+                            <td class="center">02/10/2013 10:00AM</td>
 
 
                             <td class="center">
@@ -110,7 +110,7 @@ include('header.php');
                             <td class="center">Tirong Puruntong</td>
                             <td class="center">Summons</td>
                             <td class="center">Christian Buela</td>
-                            <td class="center">02/10/2013</td>
+                            <td class="center">01/10/2013 9:00PM</td>
 
                             <td class="center">
                                 <a class="btn btn-info" href="pdf/2.  SUM-100 (Summons).pdf"> <i class="icon-eye-open icon-white"></i> <!-- View --> </a> 
@@ -126,7 +126,7 @@ include('header.php');
                             <td class="center">Vlad the Big</td>
                             <td class="center">Summons Additional Parties</td>
                             <td class="center">Vladimer Mansanas</td>
-                            <td class="center">02/10/2013</td>
+                            <td class="center">01/10/2013 10:00PM</td>
 
 
                             <td class="center">
