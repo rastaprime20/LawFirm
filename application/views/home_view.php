@@ -43,7 +43,7 @@ include('header.php');
                 <!-- the search code -->
                 <div class="row-fluid">
                     <div class="span6">
-                        <div id="DataTables_Table_0_length" class="dataTables_length">
+                        <div id="DataTables_Table_0_length" class="dataTables_length ">
                             <label><select size="1" name="DataTables_Table_0_length" aria-controls="DataTables_Table_0">
                                     <option value="10" selected="selected">10</option>
                                     <option value="25">25</option>
@@ -66,19 +66,20 @@ include('header.php');
                             </label>
                         </div>
                     </div>
-                    
+
                     <div class ="span6">
-                        <div id="DataTables_Table_0_length" class="dataTables_length">
-                                <a class="btn btn-info"><i class="icon-file icon-white"></i> <!-- New --> </a> 
-                                <a class="btn btn-danger"><i class="icon-trash icon-white"></i> <!-- Delete --></a>
-                                <a class="btn btn-group"><i class ="icon-download-alt icon-info"></i><!--Download --></a>
+                        <div id="DataTables_Table_0_filter" class="dataTables_filter, dataTables_length2">
+                            <a class="btn btn-info"><i class="icon-file icon-white"></i> <!-- New --> </a> 
+                            <a class="btn btn-danger"><i class="icon-trash icon-white"></i> <!-- Delete --></a>
+                            <a class="btn btn-group"><i class ="icon-download-alt icon-info"></i><!--Download --></a>
                         </div>
-                       <br>
+                        <br>
                     </div>
+
 
                 </div>
                 <!-- the search code end -->
-               
+
 
 
                 <table class="table table-bordered table-striped table-condensed">
@@ -152,7 +153,21 @@ include('header.php');
                 </table>
 
                 <!-- paging part -->
-                <div class="row-fluid"><div class="span12"><div class="dataTables_info" id="DataTables_Table_0_info">Showing 1 to 10 of 32 entries</div></div><div class="span12 center"><div class="dataTables_paginate paging_bootstrap pagination"><ul><li class="prev disabled"><a href="#">← Previous</a></li><li class="active"><a href="#">1</a></li><li><a href="#">2</a></li><li><a href="#">3</a></li><li><a href="#">4</a></li><li class="next"><a href="#">Next → </a></li></ul></div></div></div>
+                <div class="row-fluid">
+                    <div class="span12"><div class="dataTables_info" id="DataTables_Table_0_info">Showing 1 to 10 of 32 entries</div></div>
+                    <div class="span12 center">
+                        <div class="dataTables_paginate paging_bootstrap pagination">
+                            <ul>
+                                <li class="prev disabled"><a href="#">← Previous</a></li>
+                                <li class="active"><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li class="next"><a href="#">Next → </a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
 
 
 
@@ -179,23 +194,71 @@ include('header.php');
 <div class="modal hide fade" id="myModal">
     <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal">×</button>
-        <h3>Document history</h3>
+        <h3>Document History</h3>
     </div>
+
+
+
     <div class="modal-body">
-        <table border="0">
-            <tr>
-                <td>Last accessed by:</td>
-                <td>Juan Dela Cruz</td>
-            </tr>
-            <tr>
-                <td>Date of last accessed:</td>
-                <td>December 12, 2013</td>
-            </tr>
-            <tr>
-                <td>Modified by:</td>
-                <td>Pedro Santos</td>
-            </tr>
+
+        <label>                  
+            &nbsp; Filter By: &nbsp;
+            <select style="width: 145px;" >
+                <option value="client name" >Accessed by</option>
+                <option value="template name" >Modified by</option>
+                <option value="date and time created" >Date/Time Modified</option>
+            </select>
+
+            &nbsp; Search: &nbsp; <input type="text" style="width: 200px;">
+        </label>
+        <table class="table table-bordered table-striped table-condensed">
+            <thead>
+                <tr>        
+                    <th>Last Accessed by</th>
+                    <th>Last accessed Date/Time</th>
+                    <th>Modified by</th>
+                    <th>Modified Date/Time</th>
+                </tr>
+            </thead>   
+
+            <tbody>
+                <!--first information-->
+                <tr>
+                    <td class="center">Channister Tatum</td>
+                    <td class="center">01/10/2013 09:49AM</td>
+                    <td class="center">Tyrone Fernandez</td>							
+                    <td class="center">12/10/2012 10:30AM</td>
+                </tr>
+
+                <!-- second information -->
+                <tr>
+                    <td class="center">Tirong Puruntong</td>
+                    <td class="center">02/10/2013 10:10AM</td>
+                    <td class="center">Christian Buela</td>
+                    <td class="center">01/10/2013 10:02PM</td>
+                </tr>
+
+                <!-- third information -->
+                <tr>
+                    <td class="center">Vlad the Big</td>
+                    <td class="center">03/05/2013 05:00PM</td>
+                    <td class="center">Vladimer Mansanas</td>
+                    <td class="center">02/10/2013 10:30AM</td>
+                </tr>
+
+            </tbody>
         </table>
+        
+        <div class="dataTables_paginate paging_bootstrap pagination">
+            <ul>
+                <li class="prev disabled"><a href="#">← Previous</a></li>
+                <li class="active"><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li class="next"><a href="#">Next → </a></li>
+            </ul>
+        </div>
     </div>
     <div class="modal-footer">
         <a href="index.html" class="btn" data-dismiss="modal">Restore</a>
