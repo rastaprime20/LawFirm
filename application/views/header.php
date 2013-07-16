@@ -19,6 +19,7 @@
             .sidebar-nav {
                 padding: 9px 0;
             }
+        
         </style>
         <link href="  css/bootstrap-responsive.css" rel="stylesheet">
         <link href="  css/charisma-app.css" rel="stylesheet">
@@ -86,7 +87,7 @@
                             <ul class="nav nav-tabs nav-stacked main-menu">
                                 <li class="nav-header hidden-tablet">Main</li>
                                 <li><a class="ajax-link" href="<?php base_url();?>home"><i class="icon-home"></i><span class="hidden-tablet"> Home</span></a></li>
-                                <li><a class="ajax-link" href="templates.html"><i class="icon-list-alt"></i><span class="hidden-tablet"> Templates</span></a></li>
+                                <li><a class="ajax-link" href="<?php base_url();?>template"><i class="icon-list-alt"></i><span class="hidden-tablet"> Templates</span></a></li>
                                 <li><a class="ajax-link" href="<?php base_url() ?>user"><i class="icon-user"></i><span class="hidden-tablet"> Accounts</span></a></li>
                                 <li><a class="ajax-link" href="<?php base_url() ?>login"><i class="icon-user"></i><span class="hidden-tablet"> Log out</span></a></li>
                             </ul>
