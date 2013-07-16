@@ -1,26 +1,6 @@
 <?php
-$no_visible_elements = false;
-include('header.php');
-?>
-
-<!-- topbar ends -->
-
-   <!-- the introduction -->
-    <div class="row-fluid">
-        <div class="box span12">
-            <div class="box-header well">
-                <h2><i class="icon-info-sign"></i> Introduction</h2>
-            </div>
-            <div class="box-content">
-                <h1>Welcome</h1>
-                <p>Just modify</p>	
-                <div class="clearfix"></div>
-            </div>
-        </div>
-    </div>
-    <!-- the introduction end -->
-
-    <div class="row-fluid sortable">
+include('../LawFirm/application/views/header.php'); ?>
+<div class="row-fluid sortable">
         <div class="box span12">
             <div class="box-header well" data-original-title>
                 <h2><i class="icon-list-alt"></i>Documents</h2>
@@ -46,8 +26,8 @@ include('header.php');
                         <div class="dataTables_filter, dataTables_length2 " id="DataTables_Table_0_filter">
                             <label>Filter By: &nbsp;
                                 <select id="selectError3" size="1" name="DataTables_Table_0_length" aria-controls="DataTables_Table_0">
-                                    <option value="client name" >Client Name</option>
-                                    <option value="template name" >Template Name</option>
+                                    <option value="client name" >Employee Name</option>
+                                    <option value="template name" >Status</option>
                                     <option value="date and time created" >Date/Time Created</option>
                                 </select> 
                                 &nbsp; Search: &nbsp; <input type="text" aria-controls="DataTables_Table_0">
@@ -60,6 +40,7 @@ include('header.php');
                                 <a class="btn btn-info"><i class="icon-file icon-white"></i> <!-- New --> </a> 
                                 <a class="btn btn-danger"><i class="icon-trash icon-white"></i> <!-- Delete --></a>
                                 <a class="btn btn-group"><i class ="icon-download-alt icon-info"></i><!--Download --></a>
+                                <a class="btn btn-group"><i class ="icon-refresh icon-info"></i><!--Download --></a>
                         </div>
                        <br>
                     </div>
@@ -77,10 +58,10 @@ include('header.php');
                         <label for="checkbox"></label>
                     </form>
                     </th>
-                    <th>Client Name</th>
-                    <th>Template Title</th>
-                    <th>Created By</th>
+                    <th>Employee ID number</th>
+                    <th>Employee Name</th>
                     <th>Date Created</th>
+                    <th>Status</th>
                     <th>Action</th>
                     </tr>
                     </thead>   
@@ -89,10 +70,10 @@ include('header.php');
                         <!--first information-->
                         <tr>
                             <td><input type="checkbox" name="checkbox2" id="checkbox2" /></td>
-                            <td class="center">Channister Tatum</td>
-                            <td class="center">Civil Case Cover Sheet</td>
-                            <td class="center">Tyrone Fernandez</td>							
-                            <td class="center">01/10/2013</td>
+                            <td class="center">20100103</td>
+                            <td class="center">Buela, Christian</td>
+                            <td class="center">07/16/2013</td>							
+                            <td class="center">active</td>
 
 
                             <td class="center">
@@ -106,10 +87,10 @@ include('header.php');
                         <!-- second information -->
                         <tr>
                             <td><input type="checkbox" name="checkbox2" id="checkbox2" /></td>
-                            <td class="center">Tirong Puruntong</td>
-                            <td class="center">Summons</td>
-                            <td class="center">Christian Buela</td>
-                            <td class="center">02/10/2013</td>
+                            <td class="center">20100102</td>
+                            <td class="center">Fernandez, Tyrone</td>
+                            <td class="center">07/15/2013</td>
+                            <td class="center">active</td>
 
                             <td class="center">
                                 <a class="btn btn-info" href="pdf/2.  SUM-100 (Summons).pdf"> <i class="icon-eye-open icon-white"></i> <!-- View --> </a> 
@@ -122,10 +103,10 @@ include('header.php');
                         <!-- third information -->
                         <tr>
                             <td><input type="checkbox" name="checkbox2" id="checkbox2" /></td>
-                            <td class="center">Vlad the Big</td>
-                            <td class="center">Summons Additional Parties</td>
-                            <td class="center">Vladimer Mansanas</td>
-                            <td class="center">02/10/2013</td>
+                            <td class="center">20100101</td>
+                            <td class="center">Dagdag,Vladimer</td>
+                            <td class="center">07/14/2013</td>
+                            <td class="center">active</td>
 
 
                             <td class="center">
@@ -189,16 +170,6 @@ include('header.php');
         <a href="index.html" class="btn" data-dismiss="modal">Restore</a>
         <a href="#" class="btn btn-primary" data-dismiss="modal">Close</a>
     </div>
-</div>		
+</div>	
+<?php include('../LawFirm/application/views/footer.php'); ?>
 
-<footer>
-
-</footer>
-
-</div><!--/.fluid-container-->
-
-
-
-
-
-<?php include('footer.php'); ?>
