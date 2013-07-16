@@ -393,7 +393,11 @@ padding-top:5px;
 padding-bottom:5px; 
 }
 div.dataTables_length select {
-width: 50px;
+width: 60px;
+}
+
+div.dataTables_length2 select {
+width: 150px;
 }
 .dataTables_filter input, .dataTables_length select {
 display: inline-block;

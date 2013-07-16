@@ -278,7 +278,8 @@ a:hover {
   *width: 91.4361702036383%;
 }
 .row-fluid .span10 {
-  width: 82.97872339599999%;
+  width:  82.92553190663828%;
+  
   *width: 82.92553190663828%;
 }
 .row-fluid .span9 {
@@ -1409,7 +1410,7 @@ table .span9 {
 }
 table .span10 {
   float: none;
-  width: 764px;
+  width: 70%;
   margin-left: 0;
 }
 table .span11 {
