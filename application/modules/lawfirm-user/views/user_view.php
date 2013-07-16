@@ -273,7 +273,7 @@
    <div class="modal hide fade" id="myModal2">
   <div class="modal-header">
     <a class="close" data-dismiss="modal">×</a>
-   <h3>Edit Accounts</h3>
+   <h3>Accounts History</h3>
   </div>
   <div class="modal-body">
 
@@ -321,8 +321,7 @@
         </div>
         <div class="modal-footer">
         <a href="" class="btn" data-dismiss="modal">Close</a>
-        <a href="<?php echo base_url()?>user" class="btn btn-primary" data-dismiss="modal">Save</a>
-    </div>
+       </div>
       </div>
    
    
