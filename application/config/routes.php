@@ -44,5 +44,6 @@ $route['404_override'] = '';
 $route['login'] = "lawfirm-authentication/login";
 $route['user'] = "lawfirm-user/user";
 $route['user/create'] = 'lawfirm-user/user/create';
+$route['document'] = 'lawfirm-document/document';
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */

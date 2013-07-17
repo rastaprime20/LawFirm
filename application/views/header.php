@@ -104,6 +104,7 @@
                                 <li><a class="ajax-link" href="index.html"><i class="icon-home"></i><span class="hidden-tablet"> Home</span></a></li>
                                 <li><a class="ajax-link" href="templates.html"><i class="icon-list-alt"></i><span class="hidden-tablet"> Templates</span></a></li>
                                 <li><a class="ajax-link" href="<?php base_url() ?>user"><i class="icon-user"></i><span class="hidden-tablet"> Accounts</span></a></li>
+                                <li><a class="ajax-link" href="<?php base_url() ?>document"><i class="icon-user"></i><span class="hidden-tablet"> Document</span></a></li>
                             </ul>
 
                         </div><!--/.well -->
