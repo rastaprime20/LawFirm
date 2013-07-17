@@ -195,9 +195,9 @@
 
                 <div class ="span6">
                     <div id="DataTables_Table_0_filter" class="dataTables_filter, dataTables_length2">
-                        <a class="btn btn-info"><i class="icon-file icon-white"></i> <!-- New --> </a> 
+                        <a class="btn btn-setting" > <i class="icon-file icon-black"></i> <!-- Edit --></a>
                         <a class="btn btn-danger"><i class="icon-trash icon-white"></i> <!-- Delete --></a>
-                        <a class="btn btn-group"><i class ="icon-download-alt icon-info"></i><!--Download --></a>
+                        <a class="btn btn-danger" href="#"> <i class="icon-refresh icon-white"></i> <!-- Reset Password --></a>
                     </div>
                     <br>
                 </div>
@@ -236,10 +236,11 @@
                         <td class="center">active</td>
 
                         <td class="center">
-                            <a class="btn btn-info" href="pdf/1.  CM-010 (Civil Case Cover Sheet).pdf"> <i class="icon-eye-open icon-white"></i> <!-- View --> </a> 
-                            <a class="btn btn-warning" href=#"> <i class="icon-edit icon-white"></i> <!-- Edit --></a>
+                           
+                            <a data-toggle="modal" href="#myModal1" class="btn btn-warning"> <i class="icon-edit icon-black"></i> <!-- Edit --></a>
+                            <a data-toggle="modal" href="#myModal2" class="btn btn-group "> <i class="icon icon-clock"></i> <!-- History --></a>
                             <a class="btn btn-danger" href="#"> <i class="icon-trash icon-white"></i> <!-- Delete --></a>
-                            <a href ="#" class="btn btn-group btn-setting"> <i class="icon icon-clock"></i> <!-- Browse --></a>
+                            <a class="btn btn-danger" href="#"> <i class="icon-refresh icon-white"></i> <!-- Reset Password --></a>
                         </td>
                     </tr>
 
@@ -247,15 +248,16 @@
                     <tr>
                         <td><input type="checkbox" name="checkbox2" id="checkbox2" /></td>
                         <td class="center">20100102</td>
-                        <td class="center">Fernandz, Tyrone</td>
+                        <td class="center">Fernandez, Tyrone</td>
                         <td class="center">Admin</td>
                         <td class="center">07/15/2013</td>
                         <td class="center">active</td>
                         <td class="center">
-                            <a class="btn btn-info" href="pdf/2.  SUM-100 (Summons).pdf"> <i class="icon-eye-open icon-white"></i> <!-- View --> </a> 
-                            <a class="btn btn-warning" href="#"> <i class="icon-edit icon-white"></i> <!-- Edit --></a>
+                            
+                            <a data-toggle="modal" href="#myModal1" class="btn btn-warning"> <i class="icon-edit icon-black"></i> <!-- Edit --></a>
+                            <a data-toggle="modal" href="#myModal2" class="btn btn-group "> <i class="icon icon-clock"></i> <!-- History --></a>
                             <a class="btn btn-danger" href="#"> <i class="icon-trash icon-white"></i> <!-- Delete --></a>
-                            <a href="#" class="btn btn-group btn-setting"> <i class="icon icon-clock"></i> <!-- Browse --></a>
+                            <a class="btn btn-danger" href="#"> <i class="icon-refresh icon-white"></i> <!-- Reset Password --></a>
                         </td>
                     </tr>
 
@@ -269,10 +271,10 @@
                         <td class="center">active</td>
 
                         <td class="center">
-                            <a class="btn btn-info" href="pdf/3.  SUM-200(A) (Summons Additional Parties).pdf"> <i class="icon-eye-open icon-white"></i> <!-- View --> </a> 
-                            <a class="btn btn-warning" href="#"> <i class="icon-edit icon-white"></i> <!-- Edit --></a>
+                            <a data-toggle="modal" href="#myModal1" class="btn btn-warning"> <i class="icon-edit icon-black"></i> <!-- Edit --></a>
+                            <a data-toggle="modal" href="#myModal2" class="btn btn-group "> <i class="icon icon-clock"></i> <!-- History --></a>
                             <a class="btn btn-danger" href="#"> <i class="icon-trash icon-white"></i> <!-- Delete --></a>
-                            <a href="#" class="btn btn-group btn-setting"> <i class="icon icon-clock"></i> <!-- Browse --></a>
+                            <a class="btn btn-danger" href="#"> <i class="icon-refresh icon-white"></i> <!-- Reset Password --></a>
                         </td>
                     </tr>
 
@@ -302,20 +304,188 @@
     </div><!--/span-->
 </div><!--/row-->
 
-<!-- content ends -->
-</div><!--/#content.span10-->
-</div><!--/fluid-row-->
+<div class="modal hide fade" id="myModal">
+    
+    
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">×</button>
+        <h3>Create Accounts</h3>
+    </div>
+ <div class="modal-body">
 
-</div>
-</div><!--/span-->
+        <form  action="<?php echo base_url() ?>user" method="post">
+                   <fieldset>
+                     
+                        <div style="float:left; text-align: right">
+                        <label value="lblEmpIdNo">Employee ID No.:&nbsp;</label><br>
+                        <label value="lblEmployeeLastName">Employee Last Name:&nbsp;</label><br>
+                        <label value="lblEmployeeFirstName">Employee First Name:&nbsp;</label><br>
+                        <label value="lblEmployeeMiddleInitial">Employee Middle Initial:&nbsp;</label><br>
+                        <label value="lblEmployeeMiddleInitial">Employee Position:&nbsp;</label><br>
+                        <label value="lblDefaultusername">Employee Username:&nbsp;</label><br>
+                        <label value="lblDefaultpassword">Employee Default password:&nbsp;</label><br>
+                        <label value="lblCreatedby">Created By :&nbsp;</label><br>
+                        <label value="lblDateCreated">Date Created :&nbsp;</label>
+                        <label value="lblStatus">Status:&nbsp;</label>
+                        
+                        </div>
+                      
+                        
+                       <div style="float:left;  text-align: left" >
+                        <input class="input-large" name="txtEmpIdNo" id="txtEmpIdNo" type="text" disabled/><br>
+                        <input class="input-large" name="txtEmpLastname" id="txtEmpLastname" type="text" /><br>
+                        <input class="input-large" name="txtEmpFirstname" id="txtEmpFirstname" type="text" /><br>
+                        <input class="input-large " name="txtEmpMidInitial" id="txtEmpMidInitial" type="text" /><br><br>
+                        <select class="input-large" name="cmbEmpPosition" id="cmbEmpPosition" 
+                            <option value="0">index</option>              
+                            <option value="1">Admin</option>
+                            <option value="2">Lawyer</option>
+                            <option value="2">Secratery</option>
+                            </select><br>
+                        <input class="input-large " name="txtEmpUsername" id="txtEmpUsername" type="text" disabled/><br>
+                        <input class="input-large " name="txtDefaultPassword" id="txtDefaultPassword" type="text" disabled/><br>
+                        <input class="input-large " name="txtCreatedby" id="txtCreatedby" type="text" disabled/><br>
+                        <input class="input-large " name="txtDateCreated" id="txtDateCreated" type="text" disabled/><br>
+                        <input class="input-large " name="chkStatus" id="txtStatus" type="checkbox" checked="checked"><label value="lblActive">Active</label></input>
+                        <div style="text-align:right">
+                        
+                       </div>
+                        </div>                     
+                                     
 
-</div><!--/row-->
+                      </fieldset>
+                </form>
+        
 
 
-<!-- content ends -->
-</div><!--/#content.span10-->
-</div><!--/fluid-row-->
+   
+    </div>
+     <div class="modal-footer">
+        <a href="" class="btn" data-dismiss="modal">Close</a>
+        <a href="<?php echo base_url()?>user" class="btn btn-primary" data-dismiss="modal">Create</a>
+    </div>
+   </div>
+<!--2nd modal-->
+<div class="modal hide fade" id="myModal1"  >
+  <div class="modal-header">
+    <a class="close" data-dismiss="modal">×</a>
+   <h3>Edit Accounts</h3>
+  </div>
+  <div class="modal-body">
 
+        <form style="height:100%" action="<?php echo base_url() ?>user" method="post">
+                   <fieldset >
+                     
+                        <div style="float:left; text-align: right">
+                        <label value="lblEmpIdNo">Employee ID No.:&nbsp;</label><br>
+                        <label value="lblEmployeeLastName">Employee Last Name:&nbsp;</label><br>
+                        <label value="lblEmployeeFirstName">Employee First Name:&nbsp;</label><br>
+                        <label value="lblEmployeeMiddleInitial">Employee Middle Initial:&nbsp;</label><br>
+                        <label value="lblEmployeeMiddleInitial">Employee Position:&nbsp;</label><br>
+                        <label value="lblDefaultusername">Employee Username:&nbsp;</label><br>
+                        <label value="lblDefaultpassword">Employee Default password:&nbsp;</label><br>
+                        <label value="lblCreatedby">Created By :&nbsp;</label><br>
+                        <label value="lblDateCreated">Date Created :&nbsp;</label>
+                        <label value="lblStatus">Status:&nbsp;</label><br>
+                        
+                        
+                        </div>
+                      
+                        
+                       <div style="float:left;  text-align: left" >
+                        <input class="input-large" name="txtEmpIdNo" id="txtEmpIdNo" type="text" disabled value="20100102"/><br>
+                        <input class="input-large" name="txtEmpLastname" id="txtEmpLastname" type="text" value="Buela"/><br>
+                        <input class="input-large" name="txtEmpFirstname" id="txtEmpFirstname" type="text" value="Christian"/><br>
+                        <input class="input-large " name="txtEmpMidInitial" id="txtEmpMidInitial" type="text" value="R."/><br><br>
+                        <select class="input-large" name="cmbEmpPosition" id="cmbEmpPosition" 
+                            <option value="0">index</option>              
+                            <option value="1">Admin</option>
+                            <option value="2">Lawyer</option>
+                            <option value="2">Secratery</option>
+                            </select><br>
+                        <input class="input-large " name="txtEmpUsername" id="txtEmpUsername" type="text" value="buela_c" disabled/><br>
+                        <input class="input-large " name="txtDefaultPassword" id="txtDefaultPassword" type="password" value="123" disabled/><br>
+                        <input class="input-large " name="txtCreatedby" id="txtCreatedby" type="text" value="Admin" disabled/><br>
+                        <input class="input-large " name="txtDateCreated" id="txtDateCreated" type="text" value="07/16/2013" disabled/><br>
+                        <input class="input-large " name="chkStatus" id="txtStatus" type="checkbox" checked="checked"><label value="lblActive">Active</label></input>
+                        
+                        
+                        </div>                     
+                                     
+
+                      </fieldset>
+                </form>
+          
+    </div>
+     <div class="modal-footer">
+        <a href="" class="btn" data-dismiss="modal">Close</a>
+        <a href="<?php echo base_url()?>user" class="btn btn-primary" data-dismiss="modal">Save</a>
+    </div>
+   </div>
+
+   <!--3rd modal-->
+   <div class="modal hide fade" id="myModal2">
+  <div class="modal-header">
+    <a class="close" data-dismiss="modal">×</a>
+   <h3>Accounts History</h3>
+  </div>
+  <div class="modal-body">
+
+       <label>                  
+            &nbsp; Filter By: &nbsp;
+            <select style="width: 145px;" >
+                <option value="client name" >Accessed by</option>
+                <option value="template name" >Modified by</option>
+                <option value="date and time created" >Date/Time Modified</option>
+            </select>
+
+            &nbsp; Search: &nbsp; <input type="text" style="width: 200px;">
+        </label>
+        <table class="table table-bordered table-striped table-condensed">
+            <thead>
+                <tr>        
+                    <th>Last Accessed/Modified by</th>
+                    <th>Position</th>
+                    <th>Last accessed/Modified Date/Time</th>
+                   
+                </tr>
+            </thead>   
+
+            <tbody>
+                <!--first information-->
+                <tr>
+                    <td class="center">Buela, Christian</td>
+                    <td class="center">Admin</td>
+                    <td class="center">01/16/2013 09:49AM</td>
+                   
+                </tr>
+
+<<<<<<< HEAD
 >>>>>>> .theirs
+=======
+            </tbody>
+        </table>
+        
+        <div class="dataTables_paginate paging_bootstrap pagination">
+            <ul>
+                <li class="prev disabled"><a href="#">← Previous</a></li>
+                <li class="active"><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li class="next"><a href="#">Next → </a></li>
+            </ul>
+        </div>
+        <div class="modal-footer">
+        <a href="" class="btn" data-dismiss="modal">Close</a>
+       </div>
+      </div>
+   
+   
+    </div>
+          
+    
+ 
+>>>>>>> 39606820d2b4b7a4750b256ef874f65fe10297b1
 <?php include('../LawFirm/application/views/footer.php'); ?>
 
