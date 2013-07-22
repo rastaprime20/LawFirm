@@ -6,4 +6,8 @@ class Template extends MX_Controller {
 	{
             $this->load->view('template_view');
 	}
+        
+        public function create(){
+            $this->load->view('template_create');
+        }
 }
