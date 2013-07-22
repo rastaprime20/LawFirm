@@ -33,9 +33,9 @@
                 </div>
                 <div class="span6">
                     <div id="DataTables_Table_0_filter" class="dataTables_filter, dataTables_length2">
-                        <a class="btn btn-group"> <i class="icon-file icon-black"></i> </a>
-                        <a class="btn btn-group"><i class="icon-trash icon-black"></i> </a>
-                        <a class="btn btn-group" href="#"> <i class="icon-refresh icon-black"></i> </a>
+                        <a class="btn btn-group" data-toggle="modal"href="#CreateUser"> <i class="icon-file icon-black" title="Create User"></i> </a>
+                        <a class="btn btn-group"><i class="icon-trash icon-black" title="Archive"></i> </a>
+                        <a class="btn btn-group" href="#"> <i class="icon-refresh icon-black" title="Reset Password"></i> </a>
                     </div>
                     <br>
                 </div>
@@ -65,10 +65,11 @@
                         <td class="center">07/16/2013</td>
                         <td class="center">active</td>
                         <td class="center">
-                            <a data-toggle="modal" href="#myModal1" class="btn btn-group"> <i class="icon-edit icon-black"></i> </a>
-                            <a data-toggle="modal" href="#myModal2" class="btn btn-group"> <i class="icon icon-clock icon-black"></i> </a>
-                            <a class="btn btn-group" href="#"> <i class="icon-trash icon-black"></i> </a>
-                            <a class="btn btn-group" href="#"> <i class="icon-refresh icon-black"></i> </a>
+                            <a data-toggle="modal" href="#myModal1" class="btn btn-group"> <i class="icon-edit icon-black" title="Edit"></i> </a>
+                            <a data-toggle="modal" href="#myModal2" class="btn btn-group"> <i class="icon icon-clock icon-black" title="History"></i> </a>
+                            <a class="btn btn-group" href="#"> <i class="icon-trash icon-black" title="Archive"></i> </a>
+                            <a data-toggle="modal" href="#TransferWork" class="btn btn-group" > <i class="icon-share-alt icon-black" title="Transfer"></i> </a>
+                            <a class="btn btn-group" href="#"> <i class="icon-refresh icon-black" title="Reset Password"></i> </a>
                         </td>
                     </tr>
                     <tr>
@@ -79,10 +80,11 @@
                         <td class="center">07/15/2013</td>
                         <td class="center">active</td>
                         <td class="center">
-                            <a data-toggle="modal" href="#myModal1" class="btn btn-group"> <i class="icon-edit icon-black"></i> </a>
-                            <a data-toggle="modal" href="#myModal2" class="btn btn-group"> <i class="icon icon-clock icon-black"></i> </a>
-                            <a class="btn btn-group" href="#"> <i class="icon-trash icon-black"></i> </a>
-                            <a class="btn btn-group" href="#"> <i class="icon-refresh icon-black"></i> </a>
+                            <a data-toggle="modal" href="#myModal1" class="btn btn-group"> <i class="icon-edit icon-black" title="Edit"></i> </a>
+                            <a data-toggle="modal" href="#myModal2" class="btn btn-group"> <i class="icon icon-clock icon-black" title="History"></i> </a>
+                            <a class="btn btn-group" href="#"> <i class="icon-trash icon-black" title="Archive"></i> </a>
+                            <a data-toggle="modal" href="#TransferWork" class="btn btn-group" > <i class="icon-share-alt icon-black" title="Transfer"></i> </a>
+                            <a class="btn btn-group" href="#"> <i class="icon-refresh icon-black" title="Reset Password"></i> </a>
                         </td>
                     </tr>
                     <tr>
@@ -93,10 +95,11 @@
                         <td class="center">02/10/2013</td>
                         <td class="center">active</td>
                         <td class="center">
-                            <a data-toggle="modal" href="#myModal1" class="btn btn-group"> <i class="icon-edit icon-black"></i> </a>
-                            <a data-toggle="modal" href="#myModal2" class="btn btn-group"> <i class="icon icon-clock icon-black"></i> </a>
-                            <a class="btn btn-group" href="#"> <i class="icon-trash icon-black"></i> </a>
-                            <a class="btn btn-group" href="#"> <i class="icon-refresh icon-black"></i> </a>
+                            <a data-toggle="modal" href="#myModal1" class="btn btn-group"> <i class="icon-edit icon-black" title="Edit"></i> </a>
+                            <a data-toggle="modal" href="#myModal2" class="btn btn-group"> <i class="icon icon-clock icon-black" title="History"></i> </a>
+                            <a class="btn btn-group" href="#"> <i class="icon-trash icon-black" title="Archive"></i> </a>
+                            <a data-toggle="modal" href="#TransferWork" class="btn btn-group" > <i class="icon-share-alt icon-black" title="Transfer"></i> </a>
+                            <a class="btn btn-group" href="#"> <i class="icon-refresh icon-black" title="Reset Password"></i> </a>
                         </td>
                     </tr>
                 </tbody>
@@ -119,14 +122,14 @@
         </div>
     </div>
 </div>
-<div class="modal hide fade" id="myModal">
+<div class="modal hide fade" id="CreateUser">
     <div class="row-fluid">
         <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal">×</button>
             <h3>Create Accounts</h3>
         </div>
         <div class="modal-body" style="overflow:hidden">
-            <form action="<?php echo base_url() ?>user" method="post">
+            <form action="#" method="post">
                 <fieldset>
                     <div style="float:left;text-align:right;margin-left:50px">
                         <label value="lblEmpIdNo">Employee ID No.:&nbsp;</label><br>
@@ -260,6 +263,145 @@
         <div class="modal-footer">
             <a href="" class="btn" data-dismiss="modal">Close</a>
         </div>
+    </div>
+</div>
+
+<div class="modal hide fade" id="TransferWork" style="width: 700px;">
+    <div class="modal-header">
+        <a class="close" data-dismiss="modal">×</a>
+        <h3>Case(s) to transfer</h3>
+    </div>
+    <div class="modal-body"style="overflow:hidden;">
+        <label>
+            &nbsp; Filter By: &nbsp;
+            <select style="width:145px">
+                <option value="Client name">Client name</option>
+                <option value="Case Title">Case Title</option>
+                <option value="Lawyer">Lawyer</option>
+            </select>
+            &nbsp; Search: &nbsp; <input type="text" style="width:200px">
+        </label>
+        <table class="table table-bordered table-striped table-condensed">
+            <thead>
+                <tr>
+                    <th><input type="checkbox" name="checkbox" id="checkbox" /></th>
+                    <th>Client name</th>
+                    <th>Case Title</th>
+                    <th>Lawyer</th>
+                    <th>action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="checkbox" name="checkbox" id="checkbox" /></td>
+                    <td class="center">Fernandez, Tyrone A.K.A Boy Tuwad</td>
+                    <td class="center">Killer smile</td>
+                    <td class="center">Vladimer Dagdag</td>
+                    <td> <a data-dismiss="modal"  data-toggle="modal" href="#TransferWorkTo" class="btn btn-primary" >Transfer</a></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="checkbox" id="checkbox" /></td>
+                    <td class="center">Murdoc, Rubios A.K.A Boy Bakal</td>
+                    <td class="center">Killer eye</td>
+                    <td class="center">MangKepweng</td>
+                    <td> <a data-dismiss="modal"  data-toggle="modal" href="#TransferWorkTo" class="btn btn-primary" >Transfer</a></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="checkbox" id="checkbox" /></td>
+                    <td class="center">Islaw, Kinang A.K.A Boy Batya</td>
+                    <td class="center">Killer Nail</td>
+                    <td class="center">Mang Do</td>
+                    <td> <a data-dismiss="modal"  data-toggle="modal" href="#TransferWorkTo" class="btn btn-primary" >Transfer</a></td>
+                </tr>
+            </tbody>
+        </table>
+        <form class="form-horizontal" style="margin-left: -10%">
+            <fieldset>
+                <label class="control-label" for="focusedInput">Remark(s):</label>
+                <div class="controls">
+                    <textarea style="width: 400px;"></textarea>
+                </div>
+            </fieldset>
+        </form>
+        <div class="dataTables_paginate paging_bootstrap pagination" >
+            <ul>
+                <li class="prev disabled"><a href="#">← Previous</a></li>
+                <li class="active"><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li class="next"><a href="#">Next → </a></li>
+            </ul>
+            <div style="margin-left: 86.5%;margin-top: -17%;">
+                <a data-dismiss="modal"  data-toggle="modal" href="#TransferWorkTo" class="btn btn-primary" >Transfer</a>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <a href="" class="btn" data-dismiss="modal">Close</a>
+    </div>
+</div>
+<div class="modal hide fade" id="TransferWorkTo">
+    <div class="modal-header">
+        <a class="close" data-dismiss="modal">×</a>
+        <h3>Transfer to</h3>
+    </div>
+    <div class="modal-body">
+        <label>
+            &nbsp; Filter By: &nbsp;
+            <select style="width:145px">
+                <option value="Lawyer">Lawyer</option>
+                <option value="Cases handle">Cases handle</option>
+            </select>
+            &nbsp; Search: &nbsp; <input type="text" style="width:200px">
+        </label>
+        <table class="table table-bordered table-striped table-condensed">
+            <thead>
+                <tr>
+                    <th>Lawyer</th>
+                    <th>Cases handle</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="center">Buela, Christian</td>
+                    <td class="center">3</td>
+                    <td><a data-toggle="modal" data-dismiss="modal" href="#" class="btn btn-primary" >Use </a></td>
+                </tr>
+                <tr>
+                    <td class="center">Pascua, Jonna</td>
+                    <td class="center">3</td>
+                    <td><a data-toggle="modal" data-dismiss="modal" href="#" class="btn btn-primary" >Use </a></td>
+
+                </tr>
+                <tr>
+                    <td class="center">Silam, Joanna</td>
+                    <td class="center">3</td>
+                    <td><a data-toggle="modal" data-dismiss="modal" href="#" class="btn btn-primary" >Use </a></td>
+
+                </tr>
+                <tr>
+                    <td class="center">Fernandez, Tyrone</td>
+                    <td class="center">5</td>
+                    <td><a data-toggle="modal" data-dismiss="modal" href="#" class="btn btn-primary" >Use </a></td>
+
+                </tr>
+            </tbody>
+        </table>
+        <div class="dataTables_paginate paging_bootstrap pagination">
+            <ul>
+                <li class="prev disabled"><a href="#">← Previous</a></li>
+                <li class="active"><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li class="next"><a href="#">Next → </a></li>
+            </ul>
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <a href="" class="btn" data-dismiss="modal">Close</a>
     </div>
 </div>
 <?php include('../LawFirm/application/views/footer.php'); ?>

@@ -306,7 +306,7 @@ include('header.php'); ?>
                         <input class="input-xlarge focused" id="focusedInput" type="text" value="">
                     </div>
                     <div style="margin-left:90%">
-                        <a href="#myCreateDefendantInformation" data-toggle="modal" class="btn btn-primary" data-dismiss="modal"> Add</a>
+                        <a href="#myCreateDefendantModal" data-toggle="modal" class="btn btn-primary" data-dismiss="modal"> Add</a>
                     </div>
                 </div>
             </fieldset>
@@ -330,24 +330,24 @@ include('header.php'); ?>
                     <td><input type="checkbox" name="checkbox2" id="checkbox2" /></td>
                     <td class="center">Tyrone Fernandez</td>
                     <td class="center">MIA/Mastermind</td>
-                    <td> <a href="#myModalCaseInformation" data-toggle="modal" class="btn btn-primary" data-dismiss="modal"> Use</a>
-                        <a href="#myCreateDefendantInformation" data-toggle="modal" class="btn" data-dismiss="modal"> Modify</a>
+                    <td> <a href="#myCaseModal" data-toggle="modal" class="btn btn-primary" data-dismiss="modal"> Use</a>
+                        <a href="#myCreateDefendantModal" data-toggle="modal" class="btn" data-dismiss="modal"> Modify</a>
                     </td>
                 </tr>
                 <tr>
                     <td><input type="checkbox" name="checkbox2" id="checkbox2" /></td>
                     <td class="center">Christian Buela</td>
                     <td class="center">Assassin/Hired Hitman</td>
-                    <td> <a href="#myModalCaseInformation" data-toggle="modal" class="btn btn-primary" data-dismiss="modal"> Use</a>
-                        <a href="#myCreateDefendantInformation" data-toggle="modal" class="btn" data-dismiss="modal"> Modify</a>
+                    <td> <a href="#myCaseModal" data-toggle="modal" class="btn btn-primary" data-dismiss="modal"> Use</a>
+                        <a href="#myCreateDefendantModal" data-toggle="modal" class="btn" data-dismiss="modal"> Modify</a>
                     </td>
                 </tr>
                 <tr>
                     <td><input type="checkbox" name="checkbox2" id="checkbox2" /></td>
                     <td class="center">Vladimer Dagdag</td>
                     <td class="center">Confidential/Drug Lord</td>
-                    <td> <a href="#myModalCaseInformation" data-toggle="modal" class="btn btn-primary" data-dismiss="modal"> Use</a>
-                        <a href="#myCreateDefendantInformation" data-toggle="modal" class="btn" data-dismiss="modal"> Modify</a>
+                    <td> <a href="#myCaseModal" data-toggle="modal" class="btn btn-primary" data-dismiss="modal"> Use</a>
+                        <a href="#myCreateDefendantModal" data-toggle="modal" class="btn" data-dismiss="modal"> Modify</a>
                     </td>
                 </tr>
             </tbody>
@@ -362,7 +362,7 @@ include('header.php'); ?>
                 <li class="next"><a href="#">Next</a></li>
             </ul>
             <div style="margin-left: 75%; margin-top: -7.6%; ">
-                <a href="#myModalCaseInformation" data-toggle="modal" class="btn btn-primary" data-dismiss="modal" style="width">Use</a>
+                <a href="#myCaseModal" data-toggle="modal" class="btn btn-primary" data-dismiss="modal" style="width">Use</a>
             </div>
         </div>
     </div>
@@ -370,7 +370,7 @@ include('header.php'); ?>
         <a href="#" class="btn" data-dismiss="modal">Close</a>
     </div>
 </div>
-<div class="modal hide fade" id="myCreateDefendantInformation">
+<div class="modal hide fade" id="myCreateDefendantModal">
     <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal">x</button>
         <h3>Create Defendant Information</h3>
@@ -378,7 +378,7 @@ include('header.php'); ?>
             <li>
                 <a data-dismiss="modal" data-toggle="modal" href=#myPlaintiffModal >Plaintiff</a> <span class=divider>/</span>
                 <a data-dismiss="modal" data-toggle="modal" href=#myDefendantModal >Defendant</a> <span class=divider>/</span>
-                <a data-dismiss="modal" data-toggle="modal" href=#myCreateDefendantInformation >Create Defendant</a> <span class=divider>/</span>
+                <a data-dismiss="modal" data-toggle="modal" href=#myCreateDefendantModal >Create Defendant</a> <span class=divider>/</span>
             </li>
         </ul>
     </div>
@@ -505,10 +505,17 @@ include('header.php'); ?>
         <input type="checkbox" name="checkbox2" id="checkbox2" /> Stay on this page after saving &nbsp;&nbsp; <a data-dismiss="modal" class="btn btn-primary" href="#myModal4" data-toggle="modal">Save</a>
     </div>
 </div>
-<div class="modal hide fade" id="myModalCaseInformation">
+<div class="modal hide fade" id="myCaseModal">
     <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal">x</button>
         <h3>Case Information</h3>
+        <ul class="breadcrumb-modal">
+            <li>
+                <a data-dismiss="modal" data-toggle="modal" href=#myPlaintiffModal >Plaintiff</a> <span class=divider>/</span>
+                <a data-dismiss="modal" data-toggle="modal" href=#myDefendantModal >Defendant</a> <span class=divider>/</span>
+                <a data-dismiss="modal" data-toggle="modal" href=#myCaseModal >Case</a> <span class=divider>/</span>
+            </li>
+        </ul>
     </div>
     <div class="modal-body">
         <form class="form-horizontal">
@@ -519,7 +526,7 @@ include('header.php'); ?>
                         <input class="input-xlarge focused" id="focusedInput" type="text" value="">
                     </div>
                     <div style="margin-left:90%">
-                        <a href="#myAddingCase" data-toggle="modal" class="btn btn-primary" data-dismiss="modal"> Add</a>
+                        <a href="#myCreateCaseModal" data-toggle="modal" class="btn btn-primary" data-dismiss="modal"> Add</a>
                     </div>
                 </div>
             </fieldset>
@@ -542,21 +549,21 @@ include('header.php'); ?>
                     <td><input type="checkbox" name="checkbox2" id="checkbox2" /></td>
                     <td class="center">Rape</td>
                     <td> <a href="#myModal4" data-toggle="modal" class="btn btn-primary" data-dismiss="modal"> Use</a>
-                        <a href="#myAddingCase" data-toggle="modal" class="btn" data-dismiss="modal"> Modify</a>
+                        <a href="#myCreateCaseModal" data-toggle="modal" class="btn" data-dismiss="modal"> Modify</a>
                     </td>
                 </tr>
                 <tr>
                     <td><input type="checkbox" name="checkbox2" id="checkbox2" /></td>
                     <td class="center">Assassin</td>
                     <td> <a href="#myModal4" data-toggle="modal" class="btn btn-primary" data-dismiss="modal"> Use</a>
-                        <a href="#myAddingCase" data-toggle="modal" class="btn" data-dismiss="modal"> Modify</a>
+                        <a href="#myCreateCaseModal" data-toggle="modal" class="btn" data-dismiss="modal"> Modify</a>
                     </td>
                 </tr>
                 <tr>
                     <td><input type="checkbox" name="checkbox2" id="checkbox2" /></td>
                     <td class="center">Drugs</td>
                     <td> <a href="#myModal4" data-toggle="modal" class="btn btn-primary" data-dismiss="modal"> Use</a>
-                        <a href="#myAddingCase" data-toggle="modal" class="btn" data-dismiss="modal"> Modify</a>
+                        <a href="#myCreateCaseModal" data-toggle="modal" class="btn" data-dismiss="modal"> Modify</a>
                     </td>
                 </tr>
             </tbody>
@@ -569,18 +576,28 @@ include('header.php'); ?>
                 <li><a href="#">3</a></li>
                 <li><a href="#">4</a></li>
                 <li class="next"><a href="#">Next</a></li>
+                <div style="margin-left: 86.5%; margin-top: -7.6%; ">
+                    <a href="#myCM-010Modal" data-toggle="modal" class="btn btn-primary" data-dismiss="modal" style="width">Use</a>
+                </div>
             </ul>
         </div>
     </div>
     <div class="modal-footer">
-        <a href="#myModal4" data-toggle="modal" class="btn btn-primary" data-dismiss="modal"> Use</a>
         <a href="#" class="btn" data-dismiss="modal">Close</a>
     </div>
 </div>
-<div class="modal hide fade" id="myAddingCase">
+<div class="modal hide fade" id="myCreateCaseModal">
     <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal">x</button>
         <h3>Create Case Information</h3>
+        <ul class="breadcrumb-modal">
+            <li>
+                <a data-dismiss="modal" data-toggle="modal" href=#myPlaintiffModal >Plaintiff</a> <span class=divider>/</span>
+                <a data-dismiss="modal" data-toggle="modal" href=#myDefendantModal >Defendant</a> <span class=divider>/</span>
+                <a data-dismiss="modal" data-toggle="modal" href=#myCaseModal >Case</a> <span class=divider>/</span>
+                <a data-dismiss="modal" data-toggle="modal" href=#myCreateCaseModal >Create Case</a> <span class=divider>/</span>
+            </li>
+        </ul>
     </div>
     <div class="modal-body">
         <form class="form-horizontal">
@@ -614,6 +631,62 @@ include('header.php'); ?>
     </div>
     <div class="modal-footer">
         <input type="checkbox" name="checkbox2" id="checkbox2" /> Stay on this page after saving &nbsp;&nbsp; <a data-dismiss="modal" class="btn btn-primary" href="#myModal4" data-toggle="modal">Save</a>
+    </div>
+</div>
+<div class="modal hide fade" id="myCM-010Modal">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">x</button>
+        <h3>Civil Case Cover Sheet</h3>
+        <ul class="breadcrumb-modal">
+            <li>
+                <a data-dismiss="modal" data-toggle="modal" href=#myPlaintiffModal >Plaintiff</a> <span class=divider>/</span>
+                <a data-dismiss="modal" data-toggle="modal" href=#myDefendantModal >Defendant</a> <span class=divider>/</span>
+                <a data-dismiss="modal" data-toggle="modal" href=#myCaseModal >Case</a> <span class=divider>/</span>
+                <a data-dismiss="modal" data-toggle="modal" href=#myCM-010Modal >Civil Case Cover Sheet</a> <span class=divider>/</span>
+            </li>
+        </ul>
+    </div>
+    <div class="modal-body">
+        <table class="table table-bordered table-striped table-condensed">
+            <thead>
+                <tr>
+                    <th colspan="2"><h4>CIVIL CASE COVER SHEET</h4></th>
+                    <th><h4>Complex Case Designation</h4></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" style="text-align: center;"/>
+                            &nbsp;Unlimited
+                            <p>
+                                (Amount demanded exceeds $25,000)
+                            </p>    
+                    </td>
+                    <td>
+                        <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2" style="text-align: center;">
+                            &nbsp;Limited
+                            <p>
+                                (Amount demanded is $25,000 or less)
+                            </p>
+                    </td>
+                    <td>
+                        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" style="text-align: center;">
+                            &nbsp;Counter &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2" style="text-align: center;">
+                            &nbsp;Joinder
+                            <p>
+                                Filed with first appearance by defendant (Cal. Rules of Court, rule 3.402)
+                            </p>
+                    </td>
+                </tr>
+            </tbody>
+            
+        </table>
+        <br>
+    </div>
+    <div class="modal-footer">
+        <a href="#" class="btn" data-dismiss="modal">Close</a>
     </div>
 </div>
 <?php include('footer.php'); ?>
