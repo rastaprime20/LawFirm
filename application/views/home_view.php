@@ -548,21 +548,21 @@ include('header.php'); ?>
                 <tr>
                     <td><input type="checkbox" name="checkbox2" id="checkbox2" /></td>
                     <td class="center">Rape</td>
-                    <td> <a href="#myModal4" data-toggle="modal" class="btn btn-primary" data-dismiss="modal"> Use</a>
+                    <td> <a href="#myCM-010Modal" data-toggle="modal" class="btn btn-primary" data-dismiss="modal"> Use</a>
                         <a href="#myCreateCaseModal" data-toggle="modal" class="btn" data-dismiss="modal"> Modify</a>
                     </td>
                 </tr>
                 <tr>
                     <td><input type="checkbox" name="checkbox2" id="checkbox2" /></td>
                     <td class="center">Assassin</td>
-                    <td> <a href="#myModal4" data-toggle="modal" class="btn btn-primary" data-dismiss="modal"> Use</a>
+                    <td> <a href="#myCM-010Modal" data-toggle="modal" class="btn btn-primary" data-dismiss="modal"> Use</a>
                         <a href="#myCreateCaseModal" data-toggle="modal" class="btn" data-dismiss="modal"> Modify</a>
                     </td>
                 </tr>
                 <tr>
                     <td><input type="checkbox" name="checkbox2" id="checkbox2" /></td>
                     <td class="center">Drugs</td>
-                    <td> <a href="#myModal4" data-toggle="modal" class="btn btn-primary" data-dismiss="modal"> Use</a>
+                    <td> <a href="#myCM-010Modal" data-toggle="modal" class="btn btn-primary" data-dismiss="modal"> Use</a>
                         <a href="#myCreateCaseModal" data-toggle="modal" class="btn" data-dismiss="modal"> Modify</a>
                     </td>
                 </tr>
@@ -630,19 +630,67 @@ include('header.php'); ?>
         </form>
     </div>
     <div class="modal-footer">
+        <input type="checkbox" name="checkbox2" id="checkbox2" /> Stay on this page after saving &nbsp;&nbsp; <a data-dismiss="modal" class="btn btn-primary" href="#myCM-010InstructionsModal" data-toggle="modal">Save</a>
+    </div>
+</div>
+<div class="modal hide fade" id="myCreateCaseModal">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">x</button>
+        <h3>Create Case Information</h3>
+        <ul class="breadcrumb-modal">
+            <li>
+                <a data-dismiss="modal" data-toggle="modal" href=#myPlaintiffModal >Plaintiff</a> <span class=divider>/</span>
+                <a data-dismiss="modal" data-toggle="modal" href=#myDefendantModal >Defendant</a> <span class=divider>/</span>
+                <a data-dismiss="modal" data-toggle="modal" href=#myCaseModal >Case</a> <span class=divider>/</span>
+                <a data-dismiss="modal" data-toggle="modal" href=#myCreateCaseModal >Create Case</a> <span class=divider>/</span>
+            </li>
+        </ul>
+    </div>
+    <div class="modal-body">
+        <form class="form-horizontal">
+            <fieldset>
+                <h3 class="client_input_design_h">Case Information</h3>
+                <br>
+                <label class="control-label" for="focusedInput">Case Number:</label>
+                <div class="controls">
+                    <input class="input-xlarge focused" id="focusedInput" type="text" value="">
+                </div>
+                <br>
+                <label class="control-label" for="focusedInput">Case Title:</label>
+                <div class="controls">
+                    <input class="input-xlarge focused" id="focusedInput" type="text" value="">
+                </div>
+                <br><hr class="hr_att">
+                <h3 class="client_input_design_h">Judge Information</h3>
+                <br>
+                <label class="control-label" for="focusedInput">Judge:</label>
+                <div class="controls">
+                    <input class="input-xlarge focused" id="focusedInput" type="text" value="">
+                </div>
+                <br>
+                <label class="control-label" for="focusedInput">Department:</label>
+                <div class="controls">
+                    <input class="input-xlarge focused" id="focusedInput" type="text" value="">
+                </div>
+                <br><hr class="hr_att">
+            </fieldset>
+        </form>
+    </div>
+    <div class="modal-footer">
         <input type="checkbox" name="checkbox2" id="checkbox2" /> Stay on this page after saving &nbsp;&nbsp; <a data-dismiss="modal" class="btn btn-primary" href="#myModal4" data-toggle="modal">Save</a>
     </div>
 </div>
-<div class="modal hide fade" id="myCM-010Modal">
+<div class="modal hide fade" id="myCM-010InstructionsModal">
     <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal">x</button>
-        <h3>Civil Case Cover Sheet</h3>
+        <h3><i>For the following items to be completed, please read the instructions</i></h3>
         <ul class="breadcrumb-modal">
             <li>
                 <a data-dismiss="modal" data-toggle="modal" href=#myPlaintiffModal >Plaintiff</a> <span class=divider>/</span>
                 <a data-dismiss="modal" data-toggle="modal" href=#myDefendantModal >Defendant</a> <span class=divider>/</span>
                 <a data-dismiss="modal" data-toggle="modal" href=#myCaseModal >Case</a> <span class=divider>/</span>
                 <a data-dismiss="modal" data-toggle="modal" href=#myCM-010Modal >Civil Case Cover Sheet</a> <span class=divider>/</span>
+                <a data-dismiss="modal" data-toggle="modal" href=#myCM-010InstructionsModal >Civil Case Cover Sheet Instructions</a> <span class=divider>/</span>
             </li>
         </ul>
     </div>
@@ -660,14 +708,14 @@ include('header.php'); ?>
                         <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" style="text-align: center;"/>
                             &nbsp;Unlimited
                             <p>
-                                (Amount demanded exceeds $25,000)
+                                <br>(Amount demanded exceeds $25,000)
                             </p>    
                     </td>
                     <td>
                         <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2" style="text-align: center;">
                             &nbsp;Limited
                             <p>
-                                (Amount demanded is $25,000 or less)
+                                <br>(Amount demanded is $25,000 or less)
                             </p>
                     </td>
                     <td>
@@ -676,14 +724,14 @@ include('header.php'); ?>
                         <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2" style="text-align: center;">
                             &nbsp;Joinder
                             <p>
-                                Filed with first appearance by defendant (Cal. Rules of Court, rule 3.402)
+                                <br>Filed with first appearance by defendant (Cal. Rules of Court, rule 3.402)
                             </p>
                     </td>
                 </tr>
-            </tbody>
-            
+            </tbody>            
         </table>
-        <br>
+        <hr class="hr_att">
+        <h4 style="text-align: center;"><i>Items 1-6 below must be completed (see instructions on page 2).</i></h4>
     </div>
     <div class="modal-footer">
         <a href="#" class="btn" data-dismiss="modal">Close</a>
