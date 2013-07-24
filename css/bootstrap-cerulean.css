@@ -3393,7 +3393,7 @@ input[type="submit"].btn.btn-mini {
 }
 .breadcrumb-modal {
   padding: 7px 14px;
-  margin: 0 0 18px;
+  margin: 0 0 0px;
   list-style: none;
 }
 
@@ -4508,4 +4508,28 @@ i[class^="icon-"] {
 }
 .invisible {
   visibility: hidden;
+}
+.pdfList{
+ list-style:none;   
+ margin-left:-20%;  
+}
+.pdf2andlist{
+ list-style:none;  
+ margin-left:34.5%; 
+}
+.pdf3ndlist{
+   
+ margin-left:10%; 
+}
+.pdf3andlist{
+   
+ margin-left:3%; 
+}
+.pdf2ndliswithLetter{
+ list-style:lower-alpha;  
+
+}
+.pdf3ndliswithLetter{
+   
+ margin-left:10%; 
 }

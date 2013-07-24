@@ -23,6 +23,7 @@
         <link href='  css/opa-icons.css' rel=stylesheet>
         <link href='  css/uploadify.css' rel=stylesheet>
         <link rel="shortcut icon" href="  img/favicon.ico">
+        
     </head>
     <body>
         <?php if (!isset($no_visible_elements) || !$no_visible_elements) { ?>
