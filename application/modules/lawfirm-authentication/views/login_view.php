@@ -1,7 +1,3 @@
-<?php
-$no_visible_elements = true;
-include('../LawFirm/application/views/header.php');
-?>
 <div class="row-fluid">
     <div class="span12 center login-header">
         <h2>Law Firm</h2>
@@ -37,4 +33,3 @@ include('../LawFirm/application/views/header.php');
         </form>
     </div>
 </div>
-<?php include('../LawFirm/application/views/footer.php'); ?>

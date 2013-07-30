@@ -48,5 +48,6 @@ $route['template'] = "lawfirm-template/template";
 $route['template/create'] = "lawfirm-template/template/create";
 $route['archive'] = "lawfirm-archive/archive";
 $route['document'] = 'lawfirm-document/document';
+$route['home'] = "home";
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */

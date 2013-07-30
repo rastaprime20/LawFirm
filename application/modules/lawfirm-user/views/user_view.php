@@ -1,4 +1,3 @@
-<?php include('../LawFirm/application/views/header.php'); ?>
 <div class="row-fluid sortable">
     <div class="box span12">
         <div class="box-header well" data-original-title>
@@ -109,12 +108,12 @@
                 <div class="span12 center">
                     <div class="dataTables_paginate paging_bootstrap pagination">
                         <ul>
-                            <li class="prev disabled"><a href="#">? Previous</a></li>
+                            <li class="prev disabled"><a href="#">← Previous</a></li>
                             <li class="active"><a href="#">1</a></li>
                             <li><a href="#">2</a></li>
                             <li><a href="#">3</a></li>
                             <li><a href="#">4</a></li>
-                            <li class="next"><a href="#">Next ? </a></li>
+                            <li class="next"><a href="#">Next →</a></li>
                         </ul>
                     </div>
                 </div>
@@ -404,4 +403,3 @@
         <a href="" class="btn" data-dismiss="modal">Close</a>
     </div>
 </div>
-<?php include('../LawFirm/application/views/footer.php'); ?>

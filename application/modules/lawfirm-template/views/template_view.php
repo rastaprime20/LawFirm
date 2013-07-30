@@ -1,6 +1,3 @@
-<?php
-include('../LawFirm/application/views/header.php');
-?>
 <div class="row-fluid sortable">
     <div class="box span12">
         <div class="box-header well" data-original-title>
@@ -117,4 +114,3 @@ include('../LawFirm/application/views/header.php');
         </div>
     </div>
 </div>
-<?php include('../LawFirm/application/views/footer.php'); ?>

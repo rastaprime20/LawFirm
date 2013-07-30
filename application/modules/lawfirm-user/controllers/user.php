@@ -4,14 +4,13 @@
 class User extends MX_Controller {
 
     function index() {
-        $this->load->view('user_view');
+        $data['main_content'] = 'user_view';
+        $this->load->view('includes/template', $data);
     }
 
     function create() {
-        $this->load->view('user_create');
-    }
-    function edit() {
-        $this->load->view('user_edit');
+         $data['main_content'] = 'user_create';
+        $this->load->view('includes/template', $data);
     }
 }
 

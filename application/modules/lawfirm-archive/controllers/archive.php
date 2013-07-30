@@ -4,7 +4,8 @@ class archive extends MX_Controller {
 
 	function index()
     {
-        $this->load->view('archive'); 
+        $data['main_content']='archive';
+        $this->load->view('includes/template',$data); 
     }
 }
 

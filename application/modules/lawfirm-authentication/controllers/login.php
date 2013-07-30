@@ -2,9 +2,9 @@
 
 class Login extends MX_Controller {
 
-	function index()
-    {
-        $this->load->view('login_view'); 
+	function index() {
+        $data['main_content'] = 'login_view';
+        $this->load->view('includes/logintemplate', $data);
     }
 }
 
