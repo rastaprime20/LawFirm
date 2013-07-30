@@ -48,6 +48,12 @@ $route['template'] = "lawfirm-template/template";
 $route['template/create'] = "lawfirm-template/template/create";
 $route['archive'] = "lawfirm-archive/archive";
 $route['document'] = 'lawfirm-document/document';
-$route['home'] = "home";
+$route['home/createDocument/plaintiff'] = 'lawfirm-document/document/plaintiffview';
+$route['home/createDocument/createPlaintiff'] = 'lawfirm-document/document/plaintiffcreate';
+$route['home/createDocument/editPlaintiff'] = 'lawfirm-document/document/plaintiffedit';
+$route['home/createDocument/defendant'] = 'lawfirm-document/document/defendantview';
+$route['home/createDocument/createDefendant'] = 'lawfirm-document/document/defendantcreate';
+$route['home/createDocument/editDefendant'] = 'lawfirm-document/document/defendantedit';
+$route['home/createDocument/createCivilCaseCoverSheet'] = 'lawfirm-document/document/civilcasecoversheetcreate';
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */

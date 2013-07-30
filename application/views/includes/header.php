@@ -64,14 +64,5 @@
                             </ul>
                         </div>
                     </div>
-                    <div id=content class=span10>
-                        <div class=row-fluid>
-                            <div class=span12>
-                                <ul class=breadcrumb>
-                                    <li>
-                                        <a href=<?php echo base_url(); ?>home>Home</a> <span class=divider>/</span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
+                    
                     <?php } ?>

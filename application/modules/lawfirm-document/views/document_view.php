@@ -1,4 +1,3 @@
-<?php include('../LawFirm/application/views/header.php'); ?>
 <div class="row-fluid sortable">
     <div class="box span12">
         <div class="box-header well" data-original-title>
@@ -90,4 +89,3 @@
         <a href="#" class="btn btn-primary" data-dismiss="modal">Done</a>
     </div>
 </div>
-<?php include('../LawFirm/application/views/footer.php'); ?>
