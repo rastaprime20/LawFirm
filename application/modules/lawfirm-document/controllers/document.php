@@ -48,5 +48,9 @@ class Document extends MX_Controller {
         $data['main_content'] = 'document_civilfeewaivercreate';
         $this->load->view('includes/template', $data);
     }
+    function civilfeewaiverordercreate(){
+        $data['main_content'] = 'document_civilfeewaiverordercreate';
+        $this->load->view('includes/template', $data);
+    }
 }
 ?>

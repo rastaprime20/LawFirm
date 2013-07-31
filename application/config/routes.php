@@ -63,5 +63,6 @@ $route['home/createDocument/createCivilCaseCoverSheet'] = 'lawfirm-document/docu
 $route['home/createDocument/createSummons100'] = 'lawfirm-document/document/summons100create';
 $route['home/createDocument/viewAdditionalSummons200'] = 'lawfirm-document/document/additionalsummonsview';
 $route['home/createDocument/createCivilFeeWaiver'] = 'lawfirm-document/document/civilfeewaivercreate';
+$route['home/createDocument/createCivilFeeWaiverOrder'] = 'lawfirm-document/document/civilfeewaiverordercreate';
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */
