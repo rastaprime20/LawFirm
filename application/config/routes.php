@@ -44,6 +44,11 @@ $route['404_override'] = '';
 $route['login'] = "lawfirm-authentication/login";
 $route['user'] = "lawfirm-user/user";
 $route['user/create'] = 'lawfirm-user/user/create';
+$route['user/edit'] = 'lawfirm-user/user/edit';
+$route['user/history'] = 'lawfirm-user/user/history';
+$route['user/transfer'] = 'lawfirm-user/user/transfer';
+$route['user/transfertTo'] = 'lawfirm-user/user/transferTo';
+$route['user/transferToAtty'] = 'lawfirm-user/user/transferToAtty';
 $route['template'] = "lawfirm-template/template";
 $route['template/create'] = "lawfirm-template/template/create";
 $route['archive'] = "lawfirm-archive/archive";
@@ -55,5 +60,8 @@ $route['home/createDocument/defendant'] = 'lawfirm-document/document/defendantvi
 $route['home/createDocument/createDefendant'] = 'lawfirm-document/document/defendantcreate';
 $route['home/createDocument/editDefendant'] = 'lawfirm-document/document/defendantedit';
 $route['home/createDocument/createCivilCaseCoverSheet'] = 'lawfirm-document/document/civilcasecoversheetcreate';
+$route['home/createDocument/createSummons100'] = 'lawfirm-document/document/summons100create';
+$route['home/createDocument/viewAdditionalSummons200'] = 'lawfirm-document/document/additionalsummonsview';
+$route['home/createDocument/createCivilFeeWaiver'] = 'lawfirm-document/document/civilfeewaivercreate';
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */

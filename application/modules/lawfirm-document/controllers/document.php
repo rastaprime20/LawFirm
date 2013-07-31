@@ -36,5 +36,17 @@ class Document extends MX_Controller {
         $data['main_content'] = 'document_civilcasecoversheetcreate';
         $this->load->view('includes/template', $data);
     }
+    function summons100create(){
+        $data['main_content'] = 'document_summons100create';
+        $this->load->view('includes/template', $data);
+    }
+    function additionalsummonsview(){
+        $data['main_content'] = 'document_additionalsummons200view';
+        $this->load->view('includes/template', $data);
+    }
+    function civilfeewaivercreate(){
+        $data['main_content'] = 'document_civilfeewaivercreate';
+        $this->load->view('includes/template', $data);
+    }
 }
 ?>
