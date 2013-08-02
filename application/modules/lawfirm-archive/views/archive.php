@@ -1,3 +1,13 @@
+<div id=content class=span10>
+    <div class=row-fluid>
+        <div class=span12>
+            <ul class=breadcrumb>
+                <li>
+                    <a href=<?php echo base_url(); ?>home>Home</a> <span class=divider>/</span>
+                </li>
+            </ul>
+        </div>
+    </div>
 <div class="row-fluid sortable">
     <div class="box span12">
         <div class="box-header well">
@@ -15,10 +25,23 @@
                 <div class="tab-pane" id="accounts">
                     <div class="row-fluid sortable">
                         <div class="box span12">
-                            <div class="box-header well" data-original-title>
-                                <h2><i class="icon-briefcase"></i></h2>
-                            </div>
+                           
                             <div class="box-content">
+                                <div class="row-fluid" >
+                                 <div class="span6" style="margin-left: 50%">
+                    <div class="dataTables_filter, dataTables_length2" id="DataTables_Table_0_filter">
+                        <label>Filter By: &nbsp;
+                            <select id="selectError3" size="1" name="DataTables_Table_0_length" aria-controls="DataTables_Table_0">
+                                <option value="Employee ID No">Employee ID No.</option>
+                                <option value="Employee Name">Employee Name</option>
+                                <option value="Created by">Created by</option>
+                                <option value="Date/Time Created">Date/Time Created</option>
+                                <option value="Status">Status</option>
+                            </select>
+                            &nbsp; Search: &nbsp; <input type="text" aria-controls="DataTables_Table_0">
+                        </label>
+                    </div>
+                </div>
                                 <table class="table table-bordered table-striped table-condensed">
                                     <thead>
                                         <tr>
@@ -82,20 +105,32 @@
                                         </tr>
                                     </tbody>
                                 </table>
-                                <td class="center">
-                                    <a class="btn btn-group" href="#"> <i class="icon-refresh icon-black"></i> Restore all</a>
-                                </td>
+                                <a class="btn btn-group" href="#"> <i class="icon-refresh icon-black"></i> Restore all</a>
                             </div>
+                                </div>
                         </div>
                     </div>
                 </div>
                 <div class="tab-pane active" id="documents">
                     <div class="row-fluid sortable">
                         <div class="box span12">
-                            <div class="box-header well" data-original-title>
-                                <h2><i class="icon-briefcase"></i></h2>
-                            </div>
+                            
                             <div class="box-content">
+                                <div class="row-fluid">
+                                <div class="span6" style="margin-left: 50%">
+                    <div class="dataTables_filter, dataTables_length2" id="DataTables_Table_0_filter">
+                        <label>Filter By: &nbsp;
+                            <select id="selectError3" size="1" name="DataTables_Table_0_length" aria-controls="DataTables_Table_0">
+                                <option value="Employee ID No">Employee ID No.</option>
+                                <option value="Employee Name">Employee Name</option>
+                                <option value="Created by">Created by</option>
+                                <option value="Date/Time Created">Date/Time Created</option>
+                                <option value="Status">Status</option>
+                            </select>
+                            &nbsp; Search: &nbsp; <input type="text" aria-controls="DataTables_Table_0">
+                        </label>
+                    </div>
+                </div>
                                 <table class="table table-bordered table-striped table-condensed">
                                     <thead>
                                         <tr>
@@ -144,28 +179,38 @@
                                         </tr>
                                     </tbody>
                                 </table>
-                                <td class="center">
                                     <a class="btn btn-group" href="#"> <i class="icon-refresh icon-black"></i> Restore all</a>
-                                </td>
+                                
+                                </div>
                             </div>
+                            
                         </div>
                     </div>
                 </div>
                 <div class="tab-pane" id="templates">
                     <div class="row-fluid sortable">
                         <div class="box span12">
-                            <div class="box-header well" data-original-title>
-                                <h2><i class="icon-briefcase"></i></h2>
-                            </div>
+                          
                             <div class="box-content">
+                                <div class="row-fluid"  >
+                                 <div class="span6" style="margin-left: 50%">
+                    <div class="dataTables_filter, dataTables_length2" id="DataTables_Table_0_filter">
+                        <label>Filter By: &nbsp;
+                            <select id="selectError3" size="1" name="DataTables_Table_0_length" aria-controls="DataTables_Table_0">
+                                <option value="Employee ID No">Employee ID No.</option>
+                                <option value="Employee Name">Employee Name</option>
+                                <option value="Created by">Created by</option>
+                                <option value="Date/Time Created">Date/Time Created</option>
+                                <option value="Status">Status</option>
+                            </select>
+                            &nbsp; Search: &nbsp; <input type="text" aria-controls="DataTables_Table_0">
+                        </label>
+                    </div>
+                </div>
                                 <table class="table table-bordered table-striped table-condensed">
                                     <thead>
                                         <tr>
-                                            <th><form id="form1" name="form1" method="post" action="">
-                                        <div class="checker" id="uniform-checkbox"><span><input type="checkbox" name="checkbox" id="checkbox" style="opacity:0"></span></div>
-                                        <label for="checkbox"></label>
-                                    </form>
-                                    </th>
+                                        
                                     <th>Template Title</th>
                                     <th>Versions</th>
                                     <th>Modified By</th>
@@ -175,7 +220,7 @@
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td><div class="checker" id="uniform-checkbox2"><span><input type="checkbox" name="checkbox2" id="checkbox2" style="opacity:0"></span></div></td>
+                                            
                                             <td class="center">Civil Case Cover Sheet</td>
                                             <td class="center">1.0.0</td>
                                             <td class="center">Juan Dela Cruz</td>
@@ -185,7 +230,7 @@
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td><div class="checker" id="uniform-checkbox2"><span><input type="checkbox" name="checkbox2" id="checkbox2" style="opacity:0"></span></div></td>
+                                           
                                             <td class="center">Summons</td>
                                             <td class="center">1.0.0</td>
                                             <td class="center">Pedro Santos</td>
@@ -195,7 +240,7 @@
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td><div class="checker" id="uniform-checkbox2"><span><input type="checkbox" name="checkbox2" id="checkbox2" style="opacity:0"></span></div></td>
+                                            
                                             <td class="center">Summons Additional Parties</td>
                                             <td class="center">1.0.0</td>
                                             <td class="center">Estong Makisig</td>
@@ -206,9 +251,7 @@
                                         </tr>
                                     </tbody>
                                 </table>
-                                <td class="center">
-                                    <a class="btn btn-group" href="#"> <i class="icon-refresh icon-black"></i> Restore all</a>
-                                </td>
+                             </div>
                             </div>
                         </div>
                     </div>

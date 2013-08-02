@@ -64,5 +64,11 @@ $route['home/createDocument/createSummons100'] = 'lawfirm-document/document/summ
 $route['home/createDocument/viewAdditionalSummons200'] = 'lawfirm-document/document/additionalsummonsview';
 $route['home/createDocument/createCivilFeeWaiver'] = 'lawfirm-document/document/civilfeewaivercreate';
 $route['home/createDocument/createCivilFeeWaiverOrder'] = 'lawfirm-document/document/civilfeewaiverordercreate';
+$route['home/updateDocument/createProofSummons'] = 'lawfirm-document/document/proofsummonscreate';
+$route['home/updateDocument/createAdditionalPartiesLisPendens'] = 'lawfirm-document/document/additionalpartieslispendenscreate';
+$route['home/updateDocument/createSDCourtForm'] = 'lawfirm-document/document/sdcourtformcreate';
+$route['case/viewCase'] = 'lawfirm-document/document/documentpercaseview';
+$route['document/viewListDocument'] = 'lawfirm-document/document/documentlistdocumentview';
+$route['login/resetpassword'] = 'lawfirm-authentication/login/resetpassword';
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */

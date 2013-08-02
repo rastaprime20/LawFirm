@@ -1,3 +1,14 @@
+<div id=content class=span10>
+<div class=row-fluid>
+        <div class=span12>
+            <ul class=breadcrumb>
+                <li>
+                    <a href=<?php echo base_url(); ?>user>Accounts</a> <span class=divider>/</span>
+                    <a href=<?php echo base_url(); ?>user/create>Create Account</a> <span class=divider>/</span>
+                </li>
+            </ul>
+        </div>
+    </div>
 <div class="row-fluid">
     <div class="row-fluid sortable">
         <div class="box span12">
@@ -5,43 +16,99 @@
                 <h2><i class="icon-list-alt"></i>Accounts</h2>
             </div>
             <div class="box-content"style="display: block;">
-                <form action="<?php echo base_url() ?>user" method="post">
+                <form action="<?php echo base_url()?>user" method="post"  class="form-horizontal">
                     <fieldset>
-                        <div style="float:left;text-align:right">
-                            <label value="lblEmpIdNo">Employee ID No.:&nbsp;</label><br>
-                            <label value="lblEmployeeLastName">Employee Last Name:&nbsp;</label><br>
-                            <label value="lblEmployeeFirstName">Employee First Name:&nbsp;</label><br>
-                            <label value="lblEmployeeMiddleInitial">Employee Middle Initial:&nbsp;</label><br>
-                            <label value="lblEmployeeMiddleInitial">Employee Position:&nbsp;</label><br>
-                            <label value="lblDefaultusername">Employee Username:&nbsp;</label><br>
-                            <label value="lblDefaultpassword">Employee Default password:&nbsp;</label><br>
-                            <label value="lblCreatedby">Created By :&nbsp;</label><br>
-                            <label value="lblDateCreated">Date Created :&nbsp;</label>
-                            <label value="lblStatus">Status:&nbsp;</label>
-                        </div>
-                        <div style="float:left;text-align:left">
-                            <input class="input-large" name="txtEmpIdNo" id="txtEmpIdNo" type="text" disabled/><br>
-                            <input class="input-large" name="txtEmpLastname" id="txtEmpLastname" type="text" /><br>
-                            <input class="input-large" name="txtEmpFirstname" id="txtEmpFirstname" type="text" /><br>
-                            <input class="input-large" name="txtEmpMidInitial" id="txtEmpMidInitial" type="text" /><br><br>
-                            <select class="input-large" name="cmbEmpPosition" id="cmbEmpPosition" <option value="0">index</option>
-                                <option value="1">Admin</option>
-                                <option value="2">Lawyer</option>
-                                <option value="2">Secratery</option>
-                            </select><br>
-                            <input class="input-large" name="txtEmpUsername" id="txtEmpUsername" type="text" disabled/><br>
-                            <input class="input-large" name="txtDefaultPassword" id="txtDefaultPassword" type="text" disabled/><br>
-                            <input class="input-large" name="txtCreatedby" id="txtCreatedby" type="text" disabled/><br>
-                            <input class="input-large" name="txtDateCreated" id="txtDateCreated" type="text" disabled/><br>
-                            <input class="input-large" name="chkStatus" id="txtStatus" type="checkbox" checked="checked"><label value="lblActive">Active</label></input>
-                            <div style="text-align:right">
-                                <button type="cancel" class="btn btn-primary">Cancel</button>
-                                <button type="submit" class="btn btn-primary">Create</button>
+                       <legend><h4>Create Accounts</h4></legend>
+                        <div class="row-fluid" >
+                           
+                            <div class="span5">
+                                 <h4 style="text-align:center;color:#4F5155">Personal Information</h4><br>
+                               <div class="control-group">
+                                  <label class="control-label" for="focusedInput">State Bar No.:</label>
+                                  <div class="controls">
+                                      <input class="input-xlarge focused" id="focusedInput" type="text" value="">
+				  </div>
+			       </div>
+                               <div class="control-group">
+                                  <label class="control-label" for="focusedInput">Last Name:</label>
+                                  <div class="controls">
+                                      <input class="input-xlarge focused" id="focusedInput" type="text" value="">
+				  </div>
+			       </div>
+                               <div class="control-group">
+                                  <label class="control-label" for="focusedInput">First Name:</label>
+                                  <div class="controls">
+                                      <input class="input-xlarge focused" id="focusedInput" type="text" value="">
+				  </div>
+			       </div>
+                               <div class="control-group">
+                                  <label class="control-label" for="focusedInput">Middle Name:</label>
+                                  <div class="controls">
+                                      <input class="input-xlarge focused" id="focusedInput" type="text" value="">
+				  </div>
+			       </div>
+                               <h4 style="text-align:center;color:#4F5155">Address Information</h4><br>
+                               <div class="control-group">
+                                  <label class="control-label" for="focusedInput">Street:</label>
+                                  <div class="controls">
+                                      <input class="input-xlarge focused" id="focusedInput" type="text" value="">
+				  </div>
+			       </div>
+                               <div class="control-group">
+                                  <label class="control-label" for="focusedInput">City:</label>
+                                  <div class="controls">
+                                      <input class="input-xlarge focused" id="focusedInput" type="text" value="">
+				  </div>
+			       </div>
+                               <div class="control-group">
+                                  <label class="control-label" for="focusedInput">Province:</label>
+                                  <div class="controls">
+                                      <input class="input-xlarge focused" id="focusedInput" type="text" value="">
+				  </div>
+			       </div>
                             </div>
-                        </div>
+                            
+                            <div class="span5">
+                               <h4 style="text-align:center;color:#4F5155">Account Information</h4><br>
+                               <div class="control-group">
+                                  <label class="control-label" for="focusedInput">Username:</label>
+                                  <div class="controls">
+                                      <input class="input-xlarge focused" id="focusedInput" type="text" value="">
+				  </div>
+			       </div>
+                               <div class="control-group">
+                                  <label class="control-label" for="focusedInput">Default password:</label>
+                                  <div class="controls">
+                                      <input class="input-xlarge focused" id="focusedInput" type="text" value="">
+				  </div>
+			       </div>
+                               <div class="control-group">
+                                  <label class="control-label" for="focusedInput">Created By :</label>
+                                  <div class="controls">
+                                      <input class="input-xlarge focused" id="focusedInput" type="text" value="">
+				  </div>
+			       </div>
+                                <div class="control-group">
+                                  <label class="control-label" for="focusedInput">Date Created :</label>
+                                  <div class="controls">
+                                      <input class="input-xlarge focused" id="focusedInput" type="text" value="">
+				  </div>
+			       </div>
+                                <div class="control-group">
+                                  <label class="control-label" for="focusedInput">Status:</label>
+                                  <div class="controls">
+                                      <input type="checkbox" checked="checked" id="inlineCheckbox1" value="option1" >Active
+				  </div>
+			       </div>
+                            </div>               
+                         </div>
                     </fieldset>
                 </form>
             </div>
+            <div class="modal-footer">
+                <a href="<?php echo base_url()?>user" class="btn" data-dismiss="modal">Cancel</a>
+                <a href="<?php echo base_url()?>user" class="btn" data-dismiss="modal">Save</a>
+    </div>
         </div>
     </div>
 </div>

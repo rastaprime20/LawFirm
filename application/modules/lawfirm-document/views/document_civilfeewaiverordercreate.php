@@ -271,10 +271,50 @@
                                     <p style ="margin-left: 5px; ">
                                         <b>Warning!</b> 
                                         If item c is checked, and you do not go to court on your hearing date, the judge will deny your request to waive court fees
-                                        and you will have 10 days to pay fees. If you miss that deadline, the court cannot process the court paper
+                                        and you will have 10 days to pay fees. If you miss that deadline, the court cannot process the court papers you filed with your request.
+                                        If the papers were a notice of appeal, the appeal may be dismissed.
                                     </p>
                                 </div>
+                                <br>
+                                <div class ="span5">
+                                    Date: &nbsp; <input style="height:15px; width:125px;"class="input-xlarge focused" id="focusedInput" type="date" value="">
+                                </div>
+                                <div class ="span5">
+                                    ________________________________________________________________________<br>
+                                    <center><i>Signature of (check one):</i> &nbsp;<input type="checkbox" id="inlineCheckbox1" value="option1" >&nbsp; <i>Judicial Officer</i> &nbsp;&nbsp;&nbsp; <input type="checkbox" id="inlineCheckbox1" value="option1" >&nbsp; <i>Clerk,Deputy</i></center>
+                                </div>
+                                <hr class="hr_att">
+                                <br>
+                                <br>
+                                <p>
+                                    <b>Request for Accommodations.</b>
+                                    Assistive listening systems. computer-assisted real-time captioning. or sign language interpreter services are 
+                                    available if you ask at least 5 days before your hearing. Contact the clerk’s office for <i>Request for Accommodation,</i>, 
+                                    Form MC-410. (Civil Code, § 54.8.)
                                 </p>
+                                <br>
+                                
+                                <legend></legend>
+                                <p>
+                                <center><b>Clerk’s Certificate of Service</b></center>
+                                <br>
+                                I certify that I am not involved in this case and <i>(check one)</i>: &nbsp;<input type="checkbox" id="inlineCheckbox1" value="option1" >&nbsp; A certificate of mailing is attached.
+                                <br>
+                                <input type="checkbox" id="inlineCheckbox1" value="option1" >&nbsp; I handed a copy of this order to the party and attorney, if any, listed in <b>Person who asked the court to waive court fees</b> and <b>Lawyer</b> at the court, on the date below.
+                                <br>
+                                <input type="checkbox" id="inlineCheckbox1" value="option1" >&nbsp; This order was mailed first class, postage paid, to the party and attorney, if any, at the addresses listed in <b>Person who asked the court to waive court fees</b> and <b>Lawyer</b>, from <i>(city):</i>, &nbsp;
+                                &nbsp;<input type="text" aria-controls="DataTables_Table_0"> California on the date below.
+                                <br>
+                                <br>
+                                <div class="span5">
+                                Date: &nbsp; <input style="height:15px; width:125px;"class="input-xlarge focused" id="focusedInput" type="date" value="">
+                                
+                                </div>
+                                <div class="span5">
+                                Clerk, by: &nbsp; ____________________________________________, Deputy
+                                </div>
+                                
+                                <legend></legend>
                             </div>
                         </fieldset>
                     </form>
@@ -282,7 +322,7 @@
                 <!--End of box content-->
                 <!--Start of footer for create Civil Fee Waive Order-->
                 <div class="modal-footer">
-                    <a class="btn btn-primary" href="home/createDocument/viewAdditionalSummons200">Save & Next</a>
+                    <a class="btn btn-primary" href="home">Save & Finish</a>
                     <a class="btn" href="<?php echo base_url(); ?>home/createDocument/createCivilCaseCoverSheet">Back</a>
                 </div>
                 <!--End of footer for create Civil Fee Waive Order-->

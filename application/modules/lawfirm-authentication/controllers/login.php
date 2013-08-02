@@ -6,6 +6,11 @@ class Login extends MX_Controller {
         $data['main_content'] = 'login_view';
         $this->load->view('includes/logintemplate', $data);
     }
+    
+    function resetpassword() {
+        $data['main_content'] = 'resetpassword_view';
+        $this->load->view('includes/logintemplate', $data);
+    }
 }
 
 

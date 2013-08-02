@@ -27,8 +27,14 @@
                 
                 <!--Start of box content-->
                 <div class="box-content" style="display: block;">
+                    <div class="alert alert-info">
+                        <h1 style="font-family: arial; font-weight: lighter">Step 1</h1> 
+                        <h4 style="font-family: arial; font-weight: lighter"> &nbsp; >> &nbsp; Create Document</h4>
+                        <h4 style="font-family: arial; font-weight: lighter"> &nbsp; >> &nbsp; Choose a plaintiff or create a plaintiff</h4>
+                    </div>
                     <form>
                         <fieldset>
+                            
                             <legend>
                                 <h4 style="color: #4F5155">Create Document - Plaintiff</h4>
                             </legend>

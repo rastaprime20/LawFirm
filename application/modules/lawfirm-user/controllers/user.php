@@ -8,10 +8,31 @@ class User extends MX_Controller {
         $this->load->view('includes/template', $data);
     }
 
-    function create() {
+      function create() {
          $data['main_content'] = 'user_create';
         $this->load->view('includes/template', $data);
     }
+      function edit() {
+         $data['main_content'] = 'user_edit';
+        $this->load->view('includes/template', $data);
+    }
+      function history() {
+        $data['main_content'] = 'user_history';
+        $this->load->view('includes/template', $data);
+    }
+       function transfer() {
+        $data['main_content'] = 'user_transfer';
+        $this->load->view('includes/template', $data);
+    }
+    function transferTo() {
+        $data['main_content'] = 'user_transferTo';
+        $this->load->view('includes/template', $data);
+    }
+    function transferToAtty() {
+        $data['main_content'] = 'user_cases';
+        $this->load->view('includes/template', $data);
+    }
+   
 }
 
 

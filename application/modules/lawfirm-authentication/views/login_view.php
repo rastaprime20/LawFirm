@@ -23,7 +23,7 @@
                 </div>
                 <br>
                 <div class="input-prepend">
-                    <label class="forgotpassword" for="remember"><a href="#">Forgot Password</a></label>
+                    <label class="forgotpassword" for="remember"><a href="<?php echo base_url(); ?>login/resetpassword">Forgot Password</a></label>
                 </div>
                 <div class="clearfix"></div>
                 <p class="center span5">

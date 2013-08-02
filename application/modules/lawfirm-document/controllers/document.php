@@ -52,5 +52,29 @@ class Document extends MX_Controller {
         $data['main_content'] = 'document_civilfeewaiverordercreate';
         $this->load->view('includes/template', $data);
     }
+    function proofsummonscreate(){
+        $data['main_content'] = 'document_proofsummonscreate';
+        $this->load->view('includes/template', $data);
+    }
+    function additionalpartieslispendenscreate(){
+        $data['main_content'] = 'document_additionalpartieslispendenscreate';
+        $this->load->view('includes/template', $data);
+    }
+    function sdcourtformcreate(){
+        $data['main_content'] = 'document_sdcourtformcreate';
+        $this->load->view('includes/template', $data);
+    }
+    function documentedit(){
+        $data['main_content'] = 'document_edit';
+        $this->load->view('includes/template', $data);
+    }
+    function documentpercaseview(){
+        $data['main_content'] = 'document_percaseview';
+        $this->load->view('includes/template', $data);
+    }
+    function documentlistdocumentview(){
+        $data['main_content'] = 'document_listdocumentview';
+        $this->load->view('includes/template', $data);
+    }
 }
 ?>

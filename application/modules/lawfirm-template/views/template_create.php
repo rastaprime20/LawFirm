@@ -1,3 +1,16 @@
+<div id=content class=span10>
+    
+    <!--Start of page bread crumb-->
+    <div class=row-fluid>
+        <div class=span12>
+            <ul class=breadcrumb>
+                <li>
+                    <a href=<?php echo base_url(); ?>template/create>Templates</a> <span class=divider>/</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--End of page bread crumb-->
 <div class="row-fluid sortable">
     <div class="box span12">
         <div class="box-header well" data-original-title>
