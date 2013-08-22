@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <base href=<?php echo base_url(); ?>>
+<?php
+$fullname = $this->session->userdata('firstname'). " " . $this->session->userdata('lastname') ;
+?>
 <html lang=en>
     <head>
         <meta charset=utf-8>
@@ -37,13 +40,13 @@
                         <div class="btn-group pull-right">
                             <a class="btn dropdown-toggle" data-toggle=dropdown href=#>
                                 <i class=icon-user></i>
-                                <span class=hidden-phone>ChanPrimeBig</span>
+                                <span class=hidden-phone><?php echo sprintf($fullname); ?></span>
                                 <span class=caret></span>
                             </a>
                             <ul class=dropdown-menu>
                                 <li><a href=#>Profile</a></li>
                                 <li class=divider></li>
-                                <li><a href=<?php echo base_url(); ?>login>Logout</a></li>
+                                <li><a href=<?php echo base_url();?>login>Logout</a></li>
                             </ul>
                         </div>
                     </div>

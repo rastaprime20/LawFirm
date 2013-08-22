@@ -1,3 +1,16 @@
+<?php
+$username = $this->session->userdata('firstname');
+//print_r($this->session->all_userdata());
+?>
+
+<script>
+ $(document).ready(function(){
+  $("#searchClientRecord").autocomplete("<?php $this->home_model->getClientRecord(); ?>", {
+        selectFirst: true
+  });
+ });
+</script>
+
 <div id=content class=span10>
     <div class=row-fluid>
         <div class=span12>
@@ -14,7 +27,7 @@
                 <h2><i class="icon-info-sign"></i>Introduction</h2>
             </div>
             <div class="box-content">
-                <h1>Welcome</h1>
+                <h1>Welcome <?php echo sprintf($username);?>!</h1> 
                 <p>Just modify</p>
                 <div class="clearfix"></div>
             </div>
@@ -26,7 +39,7 @@
                 <h2><i class="icon-user"></i> Clients</h2>
             </div>
             <div class="box-content" style="display: block;">
-                <form>
+                <form method="post">
                     <fieldset>
                         <legend>
                             <h4 style="color: #4F5155">List of Client with Documents</h4>
@@ -51,37 +64,35 @@
                             </div>
                             
                             <div style="margin-left: 70%;">
-                                    <label>
-                                        &nbsp; Search: &nbsp; <input type="text">
-                                    </label>  
+                                <label>
+                                    &nbsp; Search: &nbsp; <input type="text" aria-controls="DataTables_Table_0" name="searchClientRecord" id="searchClientRecord">
+                                </label>
                             </div>
                             
                         </div>
                         
-                        <table class="table table-bordered table-striped table-condensed">
-                            <thead>
+                        <table class="table table-striped table-bordered table-condensed" id ="DataTables_Table_0">
+                           <thead>
                                 <tr>
                                     <th></th>
                                     <th>Client Name</th>
                                     <th>Status</th>
                                 </tr>
                             </thead>
+                            <?php if($client_list!= TRUE): echo '<tr><td colspan ="3" class="error"><div class="alert alert-error">' . $search_notification . '</div></td></tr>';?>
+                            <?php else :?>
+                            <?php foreach ($client_list as $key => $client){?>
                             <tbody>
                                 <tr>
                                     <td class="center">
                                         <a class="btn btn-group" href=<?php echo base_url(); ?>case/viewCase> <i class="icon-eye-open icon-black"></i> </a>
                                     </td>
-                                    <td class="center">Channister Tatum</td>
+                                    <td class="center"><?php echo $client_list[$key]['client_Lastname']. " , " . $client_list[$key]['client_Firstname']. " " . $client_list[$key]['client_Middlename']; ; ?></td>
                                     <td class="center"><span class="label label-success">Done</span></td>
                                 </tr>
-                                <tr>
-                                    <td class="center">
-                                        <a class="btn btn-group" href=<?php echo base_url(); ?>case/viewCase> <i class="icon-eye-open icon-black"></i> </a>
-                                    </td>
-                                    <td class="center">Tirong Puruntong</td>
-                                    <td class="center"><span class="label label-warning">Pending Case Documents</span></td>
-                                </tr>
                             </tbody>
+                            <?php }?>
+                           <?php endif; ?>
                         </table>
                         <div class="row-fluid">
                             <div class="span12"><div class="dataTables_info" id="DataTables_Table_0_info">Showing 1 to 10 of 32 entries</div></div>
@@ -95,6 +106,7 @@
                                         <li><a href="#">4</a></li>
                                         <li class="next"><a href="#">Next → </a></li>
                                     </ul>
+
                                 </div>
                             </div>
                         </div>

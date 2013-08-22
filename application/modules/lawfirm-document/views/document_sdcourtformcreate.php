@@ -9,7 +9,7 @@
                     <a href="<?php echo base_url(); ?>home/updateDocument/createProofSummons">Update Document</a> <span class=divider>/</span>
                     <a href=<?php echo base_url(); ?>home/updateDocument/createProofSummons">Proof of Summons (Lis Pendens)</a> <span class=divider>/</span>
                     <a href=<?php echo base_url(); ?>home/updateDocument/createAdditionalPartiesLisPendens">Additional Parties (Lis Pendens)</a> <span class=divider>/</span>
-                    <a href=<?php echo base_url(); ?>hhome/updateDocument/createSDCourtForm">SD Court Form</a> <span class=divider>/</span>
+                    <a href=<?php echo base_url(); ?>home/updateDocument/createSDCourtForm">SD Court Form</a> <span class=divider>/</span>
                 </li>
             </ul>
         </div>

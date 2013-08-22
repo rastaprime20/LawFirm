@@ -70,6 +70,20 @@ $route['home/updateDocument/createAdditionalPartiesLisPendens'] = 'lawfirm-docum
 $route['home/updateDocument/createSDCourtForm'] = 'lawfirm-document/document/sdcourtformcreate';
 $route['case/viewCase'] = 'lawfirm-document/document/documentpercaseview';
 $route['document/viewListDocument'] = 'lawfirm-document/document/documentlistdocumentview';
-$route['login/resetpassword'] = 'lawfirm-authentication/login/resetpassword';
+$route['loginforgotpassword/doforget'] = 'lawfirm-authentication/loginforgotpassword/doforget';
+$route['loginforgotpassword/forget'] = 'lawfirm-authentication/loginforgotpassword/forget';
+$route['email'] = 'lawfirm-authentication/email';
+$route['loginforgotpassword'] = 'lawfirm-authentication/loginforgotpassword';
+$route['login/validate'] = 'lawfirm-authentication/login/validate';
+$route['loginforgotpassword/doforget'] = 'lawfirm-authentication/loginforgotpassword/doforget';
+$route['loginforgotpassword/forget'] = 'lawfirm-authentication/loginforgotpassword/forget';
+$route['loginforgotpassword'] = 'lawfirm-authentication/loginforgotpassword';
+$route['email'] = 'lawfirm-authentication/email';
+$route['email/test'] = 'lawfirm-authentication/email/test';
+$route['loginforgotpassword/tryko'] = 'lawfirm-authentication/loginforgotpassword/tryko';
+$route['loginforgotpassword/reset_password_form/(:any)'] = 'lawfirm-authentication/loginforgotpassword/reset_password_form/$1';
+$route['loginforgotpassword/reset_password_form/(:any)/(:any)'] = 'lawfirm-authentication/loginforgotpassword/reset_password_form/$1/$2';
+$route['loginforgotpassword/update'] = 'lawfirm-authentication/loginforgotpassword/update';
+$route['user/searchparticularuser'] = 'lawfirm-user/user/searchparticularuser';
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */

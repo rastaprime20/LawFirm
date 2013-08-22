@@ -45,5 +45,6 @@
 <script src="js/jquery.uploadify-3.1.min.js"></script>
 <script src="js/jquery.history.js"></script>
 <script src="js/charisma.js"></script>
+<script type="text/javascript" src="jquery.autocomplete.js"></script>
 </body>
     </html>

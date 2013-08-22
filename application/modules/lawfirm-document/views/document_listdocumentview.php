@@ -137,7 +137,7 @@
                                     <td class="center">POS-030</td>
                                     <td class="center"><span class="label label-warning">Pending</span></td>
                                     <td class="center">
-                                        <a class="btn btn-group" href="#"> <i class="icon-edit icon-black"></i> </a>
+                                        <a class="btn btn-group" href="<?php echo base_url(); ?>home/updateDocument/createProofSummons"> <i class="icon-edit icon-black"></i> </a>
                                         <a class="btn btn-group" href="#"> <i class="icon-trash icon-black"></i> </a>
                                         <a class="btn btn-group" href="#"> <i class="icon-download-alt icon-black"></i> </a>
                                     </td>
@@ -150,7 +150,7 @@
                                     <td class="center">POS-030(P)</td>
                                     <td class="center"><span class="label label-warning">Pending</span></td>
                                     <td class="center">
-                                        <a class="btn btn-group" href="#"> <i class="icon-edit icon-black"></i> </a>
+                                        <a class="btn btn-group" href="<?php echo base_url(); ?>home/updateDocument/createAdditionalPartiesLisPendens"> <i class="icon-edit icon-black"></i> </a>
                                         <a class="btn btn-group" href="#"> <i class="icon-trash icon-black"></i> </a>
                                         <a class="btn btn-group" href="#"> <i class="icon-download-alt icon-black"></i> </a>
                                     </td>
@@ -163,7 +163,7 @@
                                     <td class="center">SD Court Form</td>
                                     <td class="center"><span class="label label-warning">Pending</span></td>
                                     <td class="center">
-                                        <a class="btn btn-group" href="#"> <i class="icon-edit icon-black"></i> </a>
+                                        <a class="btn btn-group" href="<?php echo base_url(); ?>home/updateDocument/createProofSummons"> <i class="icon-edit icon-black"></i> </a>
                                         <a class="btn btn-group" href="#"> <i class="icon-trash icon-black"></i> </a>
                                         <a class="btn btn-group" href="#"> <i class="icon-download-alt icon-black"></i> </a>
                                     </td>

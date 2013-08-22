@@ -32,7 +32,7 @@
                         <h4 style="font-family: arial; font-weight: lighter"> &nbsp; >> &nbsp; Create Document</h4>
                         <h4 style="font-family: arial; font-weight: lighter"> &nbsp; >> &nbsp; Choose a plaintiff or create a plaintiff</h4>
                     </div>
-                    <form>
+                    <form method="post">
                         <fieldset>
                             
                             <legend>
@@ -56,8 +56,14 @@
                                     <div class="dataTables_filter, dataTables_length2" id="DataTables_Table_0_filter">
                                         <div style="margin-left: 30%">
                                             <label>
-                                                &nbsp; Search: &nbsp; <input type="text" aria-controls="DataTables_Table_0">
+                                                &nbsp; Search: &nbsp; <input type="text" aria-controls="DataTables_Table_0" name="searchPlaintiffRecord">
                                             </label>
+                                            
+                                            <?php if (isset($_SESSION['search_notification'])): ?>
+                                                <div class="alert alert-error">
+                                                    <?php echo ($_SESSION['search_notification']) ?>
+                                                </div>
+                                            <?php endif; ?>
                                         </div>
                                         <div style="margin-left: 73%">
                                             <label>
@@ -79,58 +85,28 @@
                                             <input type="checkbox" name="checkbox" id="checkbox" />
                                         </th>
                                         <th>Client Name</th>
-                                        <th>Last Modified</th>
+                                        <th>Date/Time Created</th>
+                                        <th>Created By</th>
+                                        <th>Date/Time Modified</th>
                                         <th>Modified By</th>
                                         <th>Action</th>
                                     </tr>
                                 </thead>
+                                <?php foreach ($plaintiff_list as $key => $client){?>
                                 <tbody>
                                     <tr>
                                         <td><input type="checkbox" name="checkbox2" id="checkbox2" /></td>
-                                        <td class="center">Tyrone Fernandez</td>
-                                        <td class="center">07/30/2013 9:26PM</td>
-                                        <td class="center">Christian Buela</td>
-                                        <td><a href="<?php echo base_url(); ?>home/createDocument/defendant" class="btn btn-group" id="CreateDocument"><i class='icon-pencil icon-black'></i> </a>
-                                            <a href="<?php echo base_url(); ?>home/createDocument/editPlaintiff" class="btn btn-group"><i class="icon-edit icon-black"></i> </a>                                               
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td><input type="checkbox" name="checkbox2" id="checkbox2" /></td>
-                                        <td class="center">Christian Buela</td>
-                                        <td class="center">07/29/2013 9:26AM</td>
-                                        <td class="center">Tyrone Fernandez</td>
-                                        <td> <a href="<?php echo base_url(); ?>home/createDocument/defendant" class="btn btn-group" id="CreateDocument"><i class='icon-pencil icon-black'></i> </a>
-                                             <a href="<?php echo base_url(); ?>home/createDocument/editPlaintiff" class="btn btn-group"><i class="icon-edit icon-black"></i></a>                                               
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td><input type="checkbox" name="checkbox2" id="checkbox2" /></td>
-                                        <td class="center">Vladimer Dagdag</td>
-                                        <td class="center">07/28/2013 8:06PM</td>
-                                        <td class="center">Christian Buela</td>
-                                        <td><a href="<?php echo base_url(); ?>home/createDocument/defendant" class="btn btn-group" id="CreateDocument"><i class='icon-pencil icon-black'></i> </a>
-                                            <a href="<?php echo base_url(); ?>home/createDocument/editPlaintiff" class="btn btn-group"><i class="icon-edit icon-black"></i> </a>                                               
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td><input type="checkbox" name="checkbox2" id="checkbox2" /></td>
-                                        <td class="center">Vladimer Dagdag</td>
-                                        <td class="center">07/27/2013 10:26PM</td>
-                                        <td class="center">Tyrone Fernandez</td>
-                                        <td><a href="<?php echo base_url(); ?>home/createDocument/defendant" class="btn btn-group" id="CreateDocument"><i class='icon-pencil icon-black'></i> </a>
-                                            <a href="<?php echo base_url(); ?>home/createDocument/editPlaintiff" class="btn btn-group"><i class="icon-edit icon-black"></i> </a>                                               
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td><input type="checkbox" name="checkbox2" id="checkbox2" /></td>
-                                        <td class="center">Vladimer Dagdag</td>
-                                        <td class="center">07/26/2013 9:26PM</td>
-                                        <td class="center">Christian Buela</td>
+                                        <td class="center"><?php echo $plaintiff_list[$key]['client_Lastname']. " , " . $plaintiff_list[$key]['client_Firstname']. " " . $plaintiff_list[$key]['client_Middlename'] ; ?></td>
+                                        <td class="center"><?php echo $plaintiff_list[$key]['client_history_datecreated'] ; ?></td>
+                                        <td class="center"><?php echo $plaintiff_list[$key]['userAccount_lastname']. " , " . $plaintiff_list[$key]['userAccount_firstname']; ?></td>
+                                        <td class="center"><?php echo $plaintiff_list[$key]['client_history_datemodified'] ; ?></td>
+                                        <td class="center"><?php echo $plaintiff_list[$key]['userAccount_lastname']. " , " . $plaintiff_list[$key]['userAccount_firstname']; ?></td>
                                         <td><a href="<?php echo base_url(); ?>home/createDocument/defendant" class="btn btn-group" id="CreateDocument"><i class='icon-pencil icon-black'></i> </a>
                                             <a href="<?php echo base_url(); ?>home/createDocument/editPlaintiff" class="btn btn-group"><i class="icon-edit icon-black"></i> </a>                                               
                                         </td>
                                     </tr>
                                 </tbody>
+                                <?php }?>
                             </table>
                             <!--End of viewing the Plaintiff records-->
                             
@@ -165,4 +141,3 @@
         </div>
     </div>
     <!--End of whole box-->
-
