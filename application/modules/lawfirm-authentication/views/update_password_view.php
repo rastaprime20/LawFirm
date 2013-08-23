@@ -19,7 +19,7 @@
                     <div class="control-group">
                         <label class="control-label" for="focusedInput">Email:</label>
                         <div class="controls">
-                            <input class="input-xlarge focused" id="focusedInput" name="email" type="email" value="<?php echo set_value('email'); ?>">
+                            <input class="input-xlarge focused" id="focusedInput" name="email" type="email" value="<?php echo $email; ?>">
                         </div>
                     </div>
 

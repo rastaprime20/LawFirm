@@ -9,9 +9,9 @@
             Please login with your Username and Password.
         </div>
         
-        <?php if (isset($_SESSION['loginerror'])): ?>
+        <?php if (isset($loginerror)): ?>
             <div class="alert alert-error">
-                <?php echo ($_SESSION['loginerror']) ?>
+                <?php echo ($loginerror) ?>
             </div>
         <?php endif; ?>
         

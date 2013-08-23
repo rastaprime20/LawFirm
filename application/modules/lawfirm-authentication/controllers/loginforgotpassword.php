@@ -59,7 +59,7 @@ class Loginforgotpassword extends MX_Controller {
             'charset' => 'utf-8',
             'wordwrap' => TRUE,
             'crlf' => "\r\n",
-            'newline' => "\r\n"
+            'newline' => "\r\n"      
         );
 
         $this->load->library('email', $config);

@@ -11,10 +11,9 @@ class Login extends MX_Controller {
         $this->load->helper();
         $this->load->database();
         $this->load->helper('url');
-        $this->load->helper('cookie');
+        $this->load->helper('cookie');     
     }
-    
-   
+       
     function index() 
     {
         $data['main_content'] = 'login_view';
@@ -23,8 +22,6 @@ class Login extends MX_Controller {
     
     function validate_credentials()
     {
-        session_start();
-        
         $query = $this->login_model->validate();
                
         $userid = $query[0]['userAccount_id'];
@@ -45,43 +42,25 @@ class Login extends MX_Controller {
              
            );
             $this->session->set_userdata($data);
-
-            redirect(base_url()."home", $data);
+            
+            //redirect(base_url()."home", $data);
+            header("location:". base_url()."home");
         }
         else
-        {        
-                $username = $_POST['username'];
-                $password = $_POST['password'];
-                
-                if (empty($username) || empty($password))
+        {                        
+                if (empty($_POST['username']) || empty($_POST['password']))
                 {
-                     $_SESSION['loginerror'] = "Please type your login details";
-                     redirect(base_url().'login/validate', 'refresh');
+                     $data['loginerror'] = "Please type your login details";
                 }
-                else if (!empty ($username) || !empty($password))
+                else if (!empty ($_POST['username']) || !empty($_POST['username']))
                 {
-                     $_SESSION['loginerror'] = "Incorrect login details";
-                     redirect(base_url().'login/validate', 'refresh');
+                     $data['loginerror'] = "Incorrect login details";
                 }  
-                $this->index();
+                $data['main_content'] = 'login_view';
+                $this->load->view('includes/logintemplate', $data);   
         }
-        session_destroy();
     }
-    
-    public function validate() 
-    {
-        session_start();
-        
-        if (isset($_SESSION['loginerror'])) {
-            $data['loginerror'] = $_SESSION['loginerror'];
-        }
-        
-        $data['main_content'] = 'login_view';
-        $this->load->view('includes/logintemplate', $data);
-        
-        session_destroy();
-    }
-    
+     
     function remember_user()
     {
         $year = time() + 31536000;
@@ -133,6 +112,13 @@ class Login extends MX_Controller {
         {
             redirect(base_url()."login");
         }
+    }
+    
+    function logout()
+    {
+        $this->session->userdata = array();
+        $this->session->sess_destroy();
+        redirect(base_url()."login");
     }
     
     function resetpassword() 

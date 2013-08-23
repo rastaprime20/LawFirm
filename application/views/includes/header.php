@@ -5,6 +5,10 @@ $fullname = $this->session->userdata('firstname'). " " . $this->session->userdat
 ?>
 <html lang=en>
     <head>
+        <META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE, NO-STORE, must-revalidate">
+        <META HTTP-EQUIV="PRAGMA" CONTENT="NO-CACHE">
+        <META HTTP-EQUIV="EXPIRES" CONTENT=0>
+        <?php header("Cache-Control: no-store, no-cache, must-revalidate"); ?>
         <meta charset=utf-8>
         <title>Online Law Firm System</title>
         <link id=bs-css href="  css/bootstrap-cerulean.css" rel=stylesheet>
@@ -46,7 +50,7 @@ $fullname = $this->session->userdata('firstname'). " " . $this->session->userdat
                             <ul class=dropdown-menu>
                                 <li><a href=#>Profile</a></li>
                                 <li class=divider></li>
-                                <li><a href=<?php echo base_url();?>login>Logout</a></li>
+                                <li><a href=<?php echo base_url(); ?>logout>Logout</a></li>
                             </ul>
                         </div>
                     </div>

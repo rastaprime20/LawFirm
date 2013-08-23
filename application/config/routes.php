@@ -43,6 +43,7 @@ $route['404_override'] = '';
 
 $route['login'] = "lawfirm-authentication/login";
 $route['login/validate_credentials'] = "lawfirm-authentication/login/validate_credentials";
+$route['logout'] = "lawfirm-authentication/login/logout";
 $route['user'] = "lawfirm-user/user";
 $route['user/create'] = 'lawfirm-user/user/create';
 $route['user/edit'] = 'lawfirm-user/user/edit';
