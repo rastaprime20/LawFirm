@@ -13,6 +13,9 @@ $fullname = $this->session->userdata('firstname'). " " . $this->session->userdat
         <title>Online Law Firm System</title>
         <link id=bs-css href="  css/bootstrap-cerulean.css" rel=stylesheet>
         <style type=text/css>body{padding-bottom:40px}.sidebar-nav{padding:9px 0}</style>
+        <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+        <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
         <link href="  css/bootstrap-responsive.css" rel=stylesheet>
         <link href="  css/charisma-app.css" rel=stylesheet>
         <link href="  css/jquery-ui-1.8.21.custom.css" rel=stylesheet>
@@ -41,6 +44,11 @@ $fullname = $this->session->userdata('firstname'). " " . $this->session->userdat
                             <span class=icon-bar></span>
                             <span class=icon-bar></span>
                         </a>
+                        <div class="top-nav nav-collapse in collapse" style="margin-left: 77%;">
+                                <ul class="nav">
+                                    <h2 style="color:white;">Welcome!</h2>
+                                </ul>
+                        </div>
                         <div class="btn-group pull-right">
                             <a class="btn dropdown-toggle" data-toggle=dropdown href=#>
                                 <i class=icon-user></i>
@@ -65,8 +73,8 @@ $fullname = $this->session->userdata('firstname'). " " . $this->session->userdat
                             <ul class="nav nav-tabs nav-stacked main-menu">
                                 <li class="nav-header hidden-tablet">Main</li>
                                 <li><a class=ajax-link href=<?php echo base_url(); ?>home><i class=icon-home></i><span class=hidden-tablet> Home</span></a></li>
-                                <li><a class=ajax-link href=<?php echo base_url(); ?>template><i class=icon-list-alt></i><span class=hidden-tablet> Templates</span></a></li>
-                                <li><a class=ajax-link href=<?php echo base_url(); ?>user><i class=icon-user></i><span class=hidden-tablet> Accounts</span></a></li>
+                                <li><a class=ajax-link href=<?php echo base_url(); ?>clients><i class=icon-user></i><span class=hidden-tablet> Clients</span></a></li>
+                                <li><a class=ajax-link href=<?php echo base_url(); ?>uuser><i class=icon-user></i><span class=hidden-tablet> Accounts</span></a></li>
                                 <li><a class=ajax-link href=<?php echo base_url(); ?>archive><i class=icon-briefcase></i><span class=hidden-tablet> Archive</span></a></li>
                             </ul>
                         </div>

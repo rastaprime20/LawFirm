@@ -47,12 +47,14 @@ class Login extends MX_Controller {
             header("location:". base_url()."home");
         }
         else
-        {                        
-                if (empty($_POST['username']) || empty($_POST['password']))
+        {
+                $username = $this->input->post('username');
+                $password = $this->input->post('password');
+                if (empty($username) || empty($password))
                 {
                      $data['loginerror'] = "Please type your login details";
                 }
-                else if (!empty ($_POST['username']) || !empty($_POST['username']))
+                else if (!empty ($username) || !empty($password))
                 {
                      $data['loginerror'] = "Incorrect login details";
                 }  

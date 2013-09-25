@@ -4533,3 +4533,12 @@ i[class^="icon-"] {
    
  margin-left:10%; 
 }
+
+.groupbox
+{
+    border: 1px solid #C0C0C0; 
+    padding-left: 10px; 
+    padding-top: 10px; 
+    padding-right: 10px; 
+    padding-bottom: 10px;
+}
