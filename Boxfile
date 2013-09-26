@@ -1,4 +1,6 @@
 --- 
+after_build: 
+  - "mv pagoda/database.php application/config/database.php"
 db1: 
   name: zadmin_lawfirm
   type: mysql
@@ -23,5 +25,4 @@ web1:
   shared_writable_dirs: 
     - application/cache
     - application/logs
-after_build:
-    - "mv pagoda/database.php application/config/database.php"
+
