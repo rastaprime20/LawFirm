@@ -1,31 +1,25 @@
-web1:
- 
-  ################################################
-  ## GENERAL SETTINGS
-  ################################################
-  shared_writable_dirs: [/system/cms/cache, /system/cms/logs, /uploads, /addons]
+--- 
+db1: 
+  name: zadmin_lawfirm
+  type: mysql
+web1: 
+  index_list: 
+    - index.php
   name: wilma
- 
-  ################################################
-  ## WEB SPECIFIC SETTINGS
-  ################################################
-  index_list: [index.php]
-  shared_writable_dirs:
-    - application/cache
-    - application/logs
-	
-  ################################################
-  ## PHP SPECIFIC SETTINGS
-  ################################################
-  php_version: 5.3.8
-  php_extensions: [mysqli, curl, gd, mbstring, mysql]
   php_date_timezone: Europe/London
+  php_extensions: 
+    - mysqli
+    - curl
+    - gd
+    - mbstring
+    - mysql
+  php_file_uploads: true
   php_max_execution_time: 30
+  php_max_file_uploads: 20
   php_max_input_time: 60
   php_post_max_size: 25M
-  php_file_uploads: On
   php_upload_max_filesize: 20M
-  php_max_file_uploads: 20
-   
-db1: #component type & number
-  name: zadmin_lawfirm #component settings
+  php_version: "5.3.8"
+  shared_writable_dirs: 
+    - application/cache
+    - application/logs
