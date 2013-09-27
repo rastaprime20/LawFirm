@@ -34,7 +34,7 @@ if (isset($_SERVER['PLATFORM']))
         {
 
         case 'PAGODA':
-            define('ENVIRONMENT', 'production');
+            define('production');
             break;
 // add additional cases for more environments
         }
