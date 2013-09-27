@@ -67,8 +67,8 @@ $db['default']['stricton'] = FALSE;
 
 // production
 $db['development']['hostname'] = "localhost";
-$db['development']['username'] = "root";
-$db['development']['password'] = "";
+$db['development']['username'] = "prime";
+$db['development']['password'] = "kissmyasskat21";
 $db['development']['database'] = "zadmin_lawfirm";
 $db['development']['dbdriver'] = "mysql";
 $db['development']['dbprefix'] = "";
