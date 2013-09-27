@@ -26,22 +26,22 @@ SET time_zone = "+00:00";
 -- Table structure for table `ci_sessions`
 --
 
-CREATE TABLE IF NOT EXISTS `ci_sessions` (
-  `session_id` varchar(40) NOT NULL DEFAULT '0',
-  `ip_address` varchar(45) NOT NULL DEFAULT '0',
-  `user_agent` varchar(120) NOT NULL,
-  `last_activity` int(10) unsigned NOT NULL DEFAULT '0',
-  `user_data` text NOT NULL,
-  PRIMARY KEY (`session_id`),
-  KEY `last_activity_idx` (`last_activity`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `ci_sessions`
---
-
-INSERT INTO `ci_sessions` (`session_id`, `ip_address`, `user_agent`, `last_activity`, `user_data`) VALUES
-('8d7708f77de19a7ce9aac3b0e500a08e', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.66 Safari/537.36', 1379686064, 'a:6:{s:9:"user_data";s:0:"";s:6:"userid";s:1:"6";s:8:"username";s:5:"prime";s:9:"firstname";s:6:"Tyrone";s:8:"lastname";s:9:"Fernandez";s:12:"is_logged_in";b:1;}');
+-- CREATE TABLE IF NOT EXISTS `ci_sessions` (
+--   `session_id` varchar(40) NOT NULL DEFAULT '0',
+--   `ip_address` varchar(45) NOT NULL DEFAULT '0',
+--   `user_agent` varchar(120) NOT NULL,
+--   `last_activity` int(10) unsigned NOT NULL DEFAULT '0',
+--   `user_data` text NOT NULL,
+--   PRIMARY KEY (`session_id`),
+--   KEY `last_activity_idx` (`last_activity`)
+-- ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+-- 
+-- --
+-- -- Dumping data for table `ci_sessions`
+-- --
+-- 
+-- INSERT INTO `ci_sessions` (`session_id`, `ip_address`, `user_agent`, `last_activity`, `user_data`) VALUES
+-- ('8d7708f77de19a7ce9aac3b0e500a08e', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.66 Safari/537.36', 1379686064, 'a:6:{s:9:"user_data";s:0:"";s:6:"userid";s:1:"6";s:8:"username";s:5:"prime";s:9:"firstname";s:6:"Tyrone";s:8:"lastname";s:9:"Fernandez";s:12:"is_logged_in";b:1;}');
 
 -- --------------------------------------------------------
 
