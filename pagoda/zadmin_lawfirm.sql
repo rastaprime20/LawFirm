@@ -49,16 +49,16 @@ SET time_zone = "+00:00";
 -- Table structure for table `tbl_account_archive`
 --
 
-CREATE TABLE IF NOT EXISTS `tbl_account_archive` (
-  `account_Archive_id` int(150) NOT NULL AUTO_INCREMENT,
-  `userAccount_id` int(150) NOT NULL,
-  `userAccount_status_id` int(150) NOT NULL,
-  PRIMARY KEY (`account_Archive_id`),
-  KEY `userAccount_id` (`userAccount_id`,`userAccount_status_id`),
-  KEY `account_Archive_id` (`account_Archive_id`),
-  KEY `account_Archive_id_2` (`account_Archive_id`),
-  KEY `account_Archive_id_3` (`account_Archive_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+-- CREATE TABLE IF NOT EXISTS `tbl_account_archive` (
+--   `account_Archive_id` int(150) NOT NULL AUTO_INCREMENT,
+--   `userAccount_id` int(150) NOT NULL,
+--   `userAccount_status_id` int(150) NOT NULL,
+--   PRIMARY KEY (`account_Archive_id`),
+--   KEY `userAccount_id` (`userAccount_id`,`userAccount_status_id`),
+--   KEY `account_Archive_id` (`account_Archive_id`),
+--   KEY `account_Archive_id_2` (`account_Archive_id`),
+--   KEY `account_Archive_id_3` (`account_Archive_id`)
+-- ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
