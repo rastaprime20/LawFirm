@@ -45,7 +45,7 @@ mysql, mysqli, postgre, odbc, mssql, sqlite, oci8
 | the active record class
 */
 
-$active_group = 'default';
+//$active_group = 'default';
 $active_record = TRUE;
 
 $db['default']['hostname'] = "tunnel.pagodabox.com";
@@ -66,9 +66,9 @@ $db['default']['autoinit'] = TRUE;
 $db['default']['stricton'] = FALSE;
 
 // production
-$db['development']['hostname'] = "3ojters.no-ip.biz";
-$db['development']['username'] = "prime";
-$db['development']['password'] = "kissmyasskat21";
+$db['development']['hostname'] = "localhost";
+$db['development']['username'] = "root";
+$db['development']['password'] = "";
 $db['development']['database'] = "zadmin_lawfirm";
 $db['development']['dbdriver'] = "mysql";
 $db['development']['dbprefix'] = "";
