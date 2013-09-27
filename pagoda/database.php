@@ -48,11 +48,11 @@ mysql, mysqli, postgre, odbc, mssql, sqlite, oci8
 $active_group = 'default';
 $active_record = TRUE;
 
-$db['default']['hostname'] = $_SERVER["DB1_HOST"];
-$db['default']['port'] = $_SERVER["DB1_PORT"];
-$db['default']['username'] = $_SERVER["DB1_USER"];
-$db['default']['password'] = $_SERVER["DB1_PASS"];
-$db['default']['database'] = $_SERVER["DB1_NAME"];
+$db['default']['hostname'] = "tunnel.pagodabox.com";
+$db['default']['port'] = 45000;
+$db['default']['username'] = "rastaprime20";
+$db['default']['password'] = "kissmyasskat21";
+$db['default']['database'] = "zadmin_lawfirm";
 $db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = '';
 $db['default']['pconnect'] = TRUE;
