@@ -48,22 +48,22 @@ mysql, mysqli, postgre, odbc, mssql, sqlite, oci8
 //$active_group = 'default';
 $active_record = TRUE;
 
-$db['default']['hostname'] = "tunnel.pagodabox.com";
-$db['default']['port'] = 45000;
-$db['default']['username'] = "rastaprime20";
-$db['default']['password'] = "kissmyasskat21";
-$db['default']['database'] = "zadmin_lawfirm";
-$db['default']['dbdriver'] = 'mysql';
-$db['default']['dbprefix'] = '';
-$db['default']['pconnect'] = TRUE;
-$db['default']['db_debug'] = TRUE;
-$db['default']['cache_on'] = FALSE;
-$db['default']['cachedir'] = '';
-$db['default']['char_set'] = 'utf8';
-$db['default']['dbcollat'] = 'utf8_general_ci';
-$db['default']['swap_pre'] = '';
-$db['default']['autoinit'] = TRUE;
-$db['default']['stricton'] = FALSE;
+$db['production']['hostname'] = "tunnel.pagodabox.com";
+$db['production']['username'] = "rastaprime20";
+$db['production']['password'] = "kissmyasskat21";
+$db['production']['database'] = "zadmin_lawfirm";
+$db['production']['port'] = "45000";
+$db['production']['dbdriver'] = "mysql";
+$db['production']['dbprefix'] = "";
+$db['production']['pconnect'] = TRUE;
+$db['production']['db_debug'] = TRUE;
+$db['production']['cache_on'] = FALSE;
+$db['production']['cachedir'] = "";
+$db['production']['char_set'] = "utf8";
+$db['production']['dbcollat'] = "utf8_general_ci";
+$db['production']['swap_pre'] = '';
+$db['production']['autoinit'] = TRUE;
+$db['production']['stricton'] = FALSE;
 
 // production
 $db['development']['hostname'] = "localhost";
