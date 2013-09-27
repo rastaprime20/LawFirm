@@ -48,11 +48,10 @@
 $active_group = 'default';
 $active_record = TRUE;
 
-$db['default']['hostname'] = "tunnel.pagodabox.com";
-$db['default']['port'] = 45000;
-$db['default']['username'] = "rastaprime20";
-$db['default']['password'] = "kissmyasskat21";
-$db['default']['database'] = "zadmin_lawfirm";
+$db['default']['hostname'] = '3ojters.no-ip.biz';
+$db['default']['username'] = 'prime';
+$db['default']['password'] = 'kissmyasskat21';
+$db['default']['database'] = 'zadmin_lawfirm';
 $db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = '';
 $db['default']['pconnect'] = TRUE;
