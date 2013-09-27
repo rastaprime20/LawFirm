@@ -49,10 +49,10 @@ mysql, mysqli, postgre, odbc, mssql, sqlite, oci8
 $active_record = TRUE;
 
 $db['production']['hostname'] = "tunnel.pagodabox.com";
-$db['production']['username'] = "rastaprime20";
-$db['production']['password'] = "kissmyasskat21";
+$db['production']['username'] = "alene";
+$db['production']['password'] = "Qew2REKF";
 $db['production']['database'] = "zadmin_lawfirm";
-$db['production']['port'] = "45000";
+$db['production']['port'] = "3306";
 $db['production']['dbdriver'] = "mysql";
 $db['production']['dbprefix'] = "";
 $db['production']['pconnect'] = TRUE;
