@@ -13,9 +13,9 @@ $fullname = $this->session->userdata('firstname'). " " . $this->session->userdat
         <title>Online Law Firm System</title>
         <link id=bs-css href="  css/bootstrap-cerulean.css" rel=stylesheet>
         <style type=text/css>body{padding-bottom:40px}.sidebar-nav{padding:9px 0}</style>
-        <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-        <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js"></script>
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+        <script src=<?php echo base_url(); ?>"http://code.jquery.com/jquery-1.9.1.js"></script>
+        <script src=<?php echo base_url(); ?>"http://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js"></script>
+        <script src=<?php echo base_url(); ?>"http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
         <link href=<?php echo base_url(); ?>"  css/bootstrap-responsive.css" rel=stylesheet>
         <link href=<?php echo base_url(); ?>"  css/charisma-app.css" rel=stylesheet>
         <link href=<?php echo base_url(); ?>"  css/jquery-ui-1.8.21.custom.css" rel=stylesheet>
