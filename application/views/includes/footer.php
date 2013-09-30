@@ -10,6 +10,7 @@
     </footer>
 <?php } ?>
 </div>
+<base src=<?php echo base_url(); ?>>
 <script src="js/jquery-1.7.2.min.js"></script>
 <script src="js/jquery-ui-1.8.21.custom.min.js"></script>
 <script src="js/bootstrap-transition.js"></script>
