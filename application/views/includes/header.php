@@ -13,26 +13,26 @@ $fullname = $this->session->userdata('firstname'). " " . $this->session->userdat
         <title>Online Law Firm System</title>
         <link id=bs-css href="  css/bootstrap-cerulean.css" rel=stylesheet>
         <style type=text/css>body{padding-bottom:40px}.sidebar-nav{padding:9px 0}</style>
-        <script src=<?php echo base_url(); ?>"http://code.jquery.com/jquery-1.9.1.js"></script>
-        <script src=<?php echo base_url(); ?>"http://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js"></script>
-        <script src=<?php echo base_url(); ?>"http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-        <link href=<?php echo base_url(); ?>"  css/bootstrap-responsive.css" rel=stylesheet>
-        <link href=<?php echo base_url(); ?>"  css/charisma-app.css" rel=stylesheet>
-        <link href=<?php echo base_url(); ?>"  css/jquery-ui-1.8.21.custom.css" rel=stylesheet>
-        <link href=<?php echo base_url(); ?>'  css/fullcalendar.css' rel=stylesheet>
-        <link href=<?php echo base_url(); ?>'  css/fullcalendar.print.css' rel=stylesheet media=print>
-        <link href=<?php echo base_url(); ?>'  css/chosen.css' rel=stylesheet>
-        <link href=<?php echo base_url(); ?>'  css/uniform.default.css' rel=stylesheet>
-        <link href=<?php echo base_url(); ?>'  css/colorbox.css' rel=stylesheet>
-        <link href=<?php echo base_url(); ?>'  css/jquery.cleditor.css' rel=stylesheet>
-        <link href=<?php echo base_url(); ?>'  css/jquery.noty.css' rel=stylesheet>
-        <link href=<?php echo base_url(); ?>'  css/noty_theme_default.css' rel=stylesheet>
-        <link href=<?php echo base_url(); ?>'  css/elfinder.min.css' rel=stylesheet>
-        <link href=<?php echo base_url(); ?>'  css/elfinder.theme.css' rel=stylesheet>
-        <link href=<?php echo base_url(); ?>'  css/jquery.iphone.toggle.css' rel=stylesheet>
-        <link href=<?php echo base_url(); ?>'  css/opa-icons.css' rel=stylesheet>
-        <link href=<?php echo base_url(); ?>'  css/uploadify.css' rel=stylesheet>
-        <link rel=<?php echo base_url(); ?>"shortcut icon" href="  img/favicon.ico">
+        <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+        <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+        <link href="  css/bootstrap-responsive.css" rel=stylesheet>
+        <link href="  css/charisma-app.css" rel=stylesheet>
+        <link href="  css/jquery-ui-1.8.21.custom.css" rel=stylesheet>
+        <link href='  css/fullcalendar.css' rel=stylesheet>
+        <link href='  css/fullcalendar.print.css' rel=stylesheet media=print>
+        <link href='  css/chosen.css' rel=stylesheet>
+        <link href='  css/uniform.default.css' rel=stylesheet>
+        <link href='  css/colorbox.css' rel=stylesheet>
+        <link href='  css/jquery.cleditor.css' rel=stylesheet>
+        <link href='  css/jquery.noty.css' rel=stylesheet>
+        <link href='  css/noty_theme_default.css' rel=stylesheet>
+        <link href='  css/elfinder.min.css' rel=stylesheet>
+        <link href='  css/elfinder.theme.css' rel=stylesheet>
+        <link href='  css/jquery.iphone.toggle.css' rel=stylesheet>
+        <link href='  css/opa-icons.css' rel=stylesheet>
+        <link href='  css/uploadify.css' rel=stylesheet>
+        <link rel="shortcut icon" href="  img/favicon.ico">
     </head>
     <body>
         <?php if (!isset($no_visible_elements) || !$no_visible_elements) { ?>
