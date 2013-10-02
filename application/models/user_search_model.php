@@ -9,13 +9,55 @@ class User_search_model extends CI_Model
         {
         $user =$_GET['client_id'];
         // Retrieve data from database
-        $sql = "SELECT * FROM tbl_useraccount WHERE userAccount_id = '$user' LIMIT 1";
+        //$sql = "SELECT * FROM tbl_client WHERE client_id = '$user' LIMIT 1";
+        
+                $sql =  "SELECT
+                     a.client_Firstname,
+                    a.client_Middlename,
+                    a.client_Lastname,
+                    a.client_faxno,
+                    b.client_Mailingaddress_street,
+                    b.client_Mailingaddress_city,
+                    b.client_Mailingaddress_zipcode,
+                    b.client_Mailingaddress_telephonenumber,
+                    c.userAccount_firstname,
+                    c.userAccount_middlename,
+                    c.userAccount_lastname,
+                    d.case_Name,
+                    d.case_Number
+                 FROM 
+                    `tbl_client` a,
+                    `tbl_clientmailingaddress` b,
+                    `tbl_useraccount` c,
+                    `tbl_case` d
+                 WHERE 
+                 a.client_id = '$user' AND b.client_id = '$user' AND d.client_id = '$user' 
+                LIMIT 1";
+
+        $result = mysql_query($sql);
+        
+        if (!$result)
+            {
+            die('Could not query: ' . mysql_error());
+            }
+
+        if (mysql_num_rows($result) == 1)
+            {
+            
+             $data = mysql_fetch_array($result);
+             return $data;
+            }
+        }
+        
+        //        $user = $_GET['userAccount_id'];
+//         $user =$_GET['client_id'];
+//        // Retrieve data from database
+//        //$sql = "SELECT * FROM tbl_useraccount WHERE userAccount_id = '$user' LIMIT 1";
 //        $sql =  "SELECT 
-//                    a.client_id,
 //                    a.client_Firstname,
 //                    a.client_Middlename,
 //                    a.client_Lastname,
-//                    a.client_Faxno,
+//                    a.client_faxno,
 //                    b.client_Mailingaddress_street,
 //                    b.client_Mailingaddress_city,
 //                    b.client_Mailingaddress_zipcode,
@@ -25,55 +67,50 @@ class User_search_model extends CI_Model
 //                    c.userAccount_lastname,
 //                    d.case_Name,
 //                    d.case_Number,
-//                    f.defendant_name,
-//                    g.courthouse_name,
-//                    h.courthouse_state,
-//                    h.courthouse_cityaddress,
-//                    h.courthouse_streetaddress,
-//                    h.courthouse_zipcodeaddress
-//
+//                    e.defendant_Firstname,
+//                    e.defendant_Middlename,
+//                    e.defendant_Lastname
 //                 FROM 
-//                    tbl_client  as a,
-//                    tbl_clientmailingaddress as b,
-//                    tbl_useraccount as c,
-//                    tbl_case as d,
-//                    tbl_client_defendant as e,
-//                    tbl_defendant as f,
-//                    tbl_courthouse as g,
-//                    tbl_courthouseaddress as h
-//
+//                    tbl_client a,
+//                    tbl_clientmailingaddress b,
+//                    tbl_useraccount c,
+//                    tbl_case d,
+//                    tbl_defendant e
 //                 WHERE 
-//                    a.client_id = '$user' 
+//                    a.client_id 
 //                    AND 
-//                    b.client_id = '$user'
+//                    b.client_id 
 //                    AND 
-//                    c.client_id = '$user'
+//                    c.client_id
 //                    AND 
-//                    d.client_id = '$user'
+//                    d.client_id
 //                    AND 
-//                    e.client_id = '$user'
-//                    AND
-//                    e.defendant_id = f.defendant_id
-//                    AND
-//                    e.defendant_id = g.defendant_id
-//                    AND
-//                    g.client_id = '$user'
+//                    e.client_id='$user'
 //                LIMIT 1";
-
-        $result = mysql_query($sql);
+//        $result = mysql_query($sql);
+//
+//        if (!$result)
+//            {
+//            die('Could not query: ' . mysql_error());
+//            }
+//
+//        if (mysql_num_rows($result) == 1)
+//            {
+            // Include pdftk-php class
+            //require('../pdftk-php.php');
+            //$this->load->library('pdftk');
+            // Initiate the class
+            //$pdfmaker = new pdftk_php;
+            // Define variables for all the data fields in the PDF form. You need to assign a column in the database to each field that you'll be using in the PDF. 
+            // Example:
+            // $pdf_column = $data['column'];
+            // You can also format the MySQL data how you want here. 
+            // One common example is formatting a date saved in the database. For example:
+            // $pdf_date = date("l, F j, Y, g:i a", strtotime($data['date']));
+            
+           //end model here
+//            $data = mysql_fetch_array($result);
         
-        
-        if (!$result)
-            {
-            die('Could not query: ' . mysql_error());
-            }
-
-        if (mysql_num_rows($result) == 1)
-            {
-             $data = mysql_fetch_array($result);
-             return $data;
-            }
-        }
     function getallUser()
         {
         //$this->db->order_by('userAccount_datetimecreated', 'desc');

@@ -73,8 +73,8 @@ $fullname = $this->session->userdata('firstname'). " " . $this->session->userdat
                             <ul class="nav nav-tabs nav-stacked main-menu">
                                 <li class="nav-header hidden-tablet">Main</li>
                                 <li><a class=ajax-link href=<?php echo base_url(); ?>home><i class=icon-home></i><span class=hidden-tablet> Home</span></a></li>
-                                <li><a class=ajax-link href=<?php echo base_url(); ?>clients><i class=icon-user></i><span class=hidden-tablet> Clients</span></a></li>
-                                <li><a class=ajax-link href=<?php echo base_url(); ?>uuser><i class=icon-user></i><span class=hidden-tablet> Accounts</span></a></li>
+                                <li><a class=ajax-link href=<?php echo base_url(); ?>clients><i class=icon-user></i><span class=hidden-tablet> Accounts</span></a></li>
+                                <li><a class=ajax-link href=<?php echo base_url(); ?>uuser><i class=icon-user></i><span class=hidden-tablet> Clients</span></a></li>
                                 <li><a class=ajax-link href=<?php echo base_url(); ?>archive><i class=icon-briefcase></i><span class=hidden-tablet> Archive</span></a></li>
                             </ul>
                         </div>

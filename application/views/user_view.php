@@ -3,7 +3,7 @@
         <div class=span12>
             <ul class=breadcrumb>
                 <li>
-                    <a href=<?php echo base_url(); ?>user>Accounts</a> <span class=divider>/</span>
+                    <a href=<?php echo base_url(); ?>user>Clients</a> <span class=divider>/</span>
                 </li>
             </ul>
         </div>
@@ -11,7 +11,7 @@
     <div class="row-fluid sortable">
         <div class="box span12">
             <div class="box-header well" data-original-title>
-                <h2><i class="icon-list-alt"></i>Accounts</h2>
+                <h2><i class="icon-list-alt"></i>Clients</h2>
             </div>
             <div class="box-content">
                 <div class="row-fluid">
@@ -28,10 +28,10 @@
                     </div>
                     <div class="span6">
                         <div class="dataTables_filter, dataTables_length2" id="DataTables_Table_0_filter">
-                            <p>Filter By: &nbsp;
+                            
                                <form action="<?php echo base_url()?>user/searchparticularuser" method="POST">
                                 &nbsp; Search: &nbsp; <input type="text" aria-controls="DataTables_Table_0"  name="keyword" >
-                                 <input type="submit">
+                                 
                                </form> 
                             </p>
                         </div>
@@ -67,13 +67,13 @@
                            <td><input type="checkbox" name="checkbox2" id="checkbox2" /></td>
                            <td><?php echo $val['client_Lastname'] . ',' . $val['client_Firstname'] . '&nbsp;' . $val['client_Middlename']; ?></td>
                            <td class="center">
-                                <a href="<?php echo base_url();?>download<?php echo "?client_id=".$val['client_id']?>" class="btn btn-group"> <i class="icon-edit icon-black" title="Edit"></i> </a>
+                                <a href="<?php echo base_url();?>download<?php echo "?client_id=".$val['client_id']?>" class="btn btn-group"> <i class="icon-download-alt icon-black" title="Download"></i> </a>
                                 <a href="<?php base_url(); ?>user/history" class="btn btn-group"> <i class="icon icon-clock icon-black" title="History"></i> </a>
                                 <a class="btn btn-group" title="Delete" href=""><i class="icon-trash icon-black"></i> </a>
                                 <a href="<?php base_url(); ?>user/transfer" class="btn btn-group" > <i class="icon-share-alt icon-black" title="Transfer"></i> </a>
                                 <a class="btn btn-group" href="#"> <i class="icon-refresh icon-black" title="Reset Password"></i> </a>
                            </td>
-                    </tr>
+                        </tr>
                     
                     <?php endforeach; ?>
                       <?php endif; ?>

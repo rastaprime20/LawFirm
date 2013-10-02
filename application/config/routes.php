@@ -75,5 +75,7 @@ $route['loginforgotpassword/reset_password_form/(:any)'] = 'lawfirm-authenticati
 $route['loginforgotpassword/reset_password_form/(:any)/(:any)'] = 'lawfirm-authentication/loginforgotpassword/reset_password_form/$1/$2';
 $route['loginforgotpassword/update'] = 'lawfirm-authentication/loginforgotpassword/update';
 $route['user/searchparticularuser'] = 'lawfirm-user/user/searchparticularuser';
+$route['download'] = 'download';
+$route['download/(any:)'] = 'download/$1';
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */

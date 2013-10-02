@@ -13,57 +13,13 @@ class Download extends CI_Controller
     public function index()
         {
         
-        $data=$this->user_search_model->download();
-        
+        $data = $this->user_search_model->download();
+
         // Put the unique user id in a variable - the script know what record to pull from the database because of this variable, which comes to the script as a GET variable in this case. You could/should use a fancier, securer, less user-editable way of transmitting ids, like using a unique md5 hash for the id... again, this is just a simple example
         //load model:
         //start here
-//        $user = $_GET['userAccount_id'];
-//         $user =$_GET['client_id'];
-//        // Retrieve data from database
-//        //$sql = "SELECT * FROM tbl_useraccount WHERE userAccount_id = '$user' LIMIT 1";
-//        $sql =  "SELECT 
-//                    a.client_Firstname,
-//                    a.client_Middlename,
-//                    a.client_Lastname,
-//                    a.client_faxno,
-//                    b.client_Mailingaddress_street,
-//                    b.client_Mailingaddress_city,
-//                    b.client_Mailingaddress_zipcode,
-//                    b.client_Mailingaddress_telephonenumber,
-//                    c.userAccount_firstname,
-//                    c.userAccount_middlename,
-//                    c.userAccount_lastname,
-//                    d.case_Name,
-//                    d.case_Number,
-//                    e.defendant_Firstname,
-//                    e.defendant_Middlename,
-//                    e.defendant_Lastname
-//                 FROM 
-//                    tbl_client a,
-//                    tbl_clientmailingaddress b,
-//                    tbl_useraccount c,
-//                    tbl_case d,
-//                    tbl_defendant e
-//                 WHERE 
-//                    a.client_id 
-//                    AND 
-//                    b.client_id 
-//                    AND 
-//                    c.client_id
-//                    AND 
-//                    d.client_id
-//                    AND 
-//                    e.client_id='$user'
-//                LIMIT 1";
-//        $result = mysql_query($sql);
-//
-//        if (!$result)
-//            {
-//            die('Could not query: ' . mysql_error());
-//            }
-//
-//        if (mysql_num_rows($result) == 1)
+        //
+        //if (mysql_num_rows($result) == 1)
 //            {
             // Include pdftk-php class
             //require('../pdftk-php.php');
@@ -76,10 +32,10 @@ class Download extends CI_Controller
             // You can also format the MySQL data how you want here. 
             // One common example is formatting a date saved in the database. For example:
             // $pdf_date = date("l, F j, Y, g:i a", strtotime($data['date']));
-            
-           //end model here
+            //end model here
 //            $data = mysql_fetch_array($result);
 //            $pdf_plaintiffname = $data['client_Firstname']." ".$data['client_Mailingaddress_street'];
+
             $pdf_plaintiffname = $data['client_Firstname']." ".$data['client_Middlename']." ".$data['client_Lastname'];
             $pdf_staddress = $data['client_Mailingaddress_street'];
             $pdf_fullmailingadd=$data['client_Mailingaddress_city']." ".$data['client_Mailingaddress_zipcode'];
@@ -91,13 +47,11 @@ class Download extends CI_Controller
 //            $pdf_ctyzip=$data['userAccount_firstname']." ".$data['userAccount_firstname'];
 //            $pdf_branchname=$data['userAccount_firstname'];
             $pdf_casename=$data['case_Name'];
-            $pdf_caseno=$data['case_Number'];
+//            $pdf_caseno=$data['case_Number'];
             $pdf_client_id=$data['client_id'];
-          
 //            $pdf_judge=$data['userAccount_firstname'];
 //            $pdf_dept=$data['userAccount_firstname'];
             $pdf_currentdate=date("l, F j, Y, g:i a");
-
             // $fdf_data_strings associates the names of the PDF form fields to the PHP variables you just set above. In order to work correctly the PDF form field name has to be exact. PDFs made in Acrobat generally have simpler names - just the name you assigned to the field. PDFs made in LiveCycle Designer nest their forms in other random page elements, creating a long and hairy field name. You can use pdftk to discover the real names of your PDF form fields: run "pdftk form.pdf dump_data_fields > form-fields.txt" to generate a report.
             // Example of field names from a PDF created in LiveCycle:
             // $fdf_data_strings= array('form1[0].#subform[0].#area[0].LastName[0]' => $pdf_lastname,  'form1[0].#subform[0].#area[0].FirstName[0]' => $pdf_firstname, 'form1[0].#subform[0].#area[0].EMail[0]' => $pdf_email, );
@@ -115,13 +69,12 @@ class Download extends CI_Controller
 //                                        'Field9b'         => $pdf_ctyzip,
 //                                        'Field9c'         => $pdf_branchname,
                                         'CaseName'        => $pdf_casename,
-                                        'Case Number'     => $pdf_caseno,
+//                                        'Case Number'     => $pdf_caseno,
 //                                        'Judge'           => $pdf_judge,
 //                                        'Dept'            => $pdf_dept,
                                         'Date'            => $pdf_currentdate,
                                         'client_ID'       => $pdf_client_id
                                      );
-
             // See the documentation of pdftk-php.php for more explanation of these other variables.
             // Used for radio buttons and check boxes
             // Example: (For check boxes options are Yes and Off)
@@ -147,31 +100,31 @@ class Download extends CI_Controller
             $pdf_filename = "Test PDF for $pdf_plaintiffname.pdf";
 
             // Name/location of original, empty PDF form
-            $pdf_original = "template/CivilCaseCoverSheet.pdf";
+            $pdf_original = "templates/CivilCaseCoverSheet.pdf";
            
 
             // Finally make the actual PDF file!
             $this->make_pdf($fdf_data_strings, $fdf_data_names, $fields_hidden, $fields_readonly, $pdf_original, $pdf_filename);
+            
             // The end!
 //            }
         }
 
     public function make_pdf($fdf_data_strings, $fdf_data_names, $fields_hidden, $fields_readonly, $pdf_original, $pdf_filename)
         {
-
+        
 // Create the fdf file
         $fdf = $this->forge_fdf('', $fdf_data_strings, $fdf_data_names, $fields_hidden, $fields_readonly);
-        
         //$pdf_original = $_REQUEST["CivilCaseCoverSheet.pdf"];
         // Save the fdf file temporarily - make sure the server has write permissions in the folder you specify in tempnam()
         $fdf_fn = tempnam("./tmp", "fdf");
         $fp = fopen($fdf_fn, 'w');
-    
+        
         if ($fp)
             {
-
+            
             fwrite($fp, $fdf);
-
+           
             fclose($fp);
             
             // Send a force download header to the browser with a file MIME type
@@ -179,12 +132,12 @@ class Download extends CI_Controller
 
             header("Content-Type: application/force-download;");
             header("Content-Disposition: attachment; filename=\"$pdf_filename\"");
-
+            
             // Actually make the PDF by running pdftk - make sure the path to pdftk is correct
             // The PDF will be output directly to the browser - apart from the original PDF file, no actual PDF wil be saved on the server.
             passthru("pdftk $pdf_original fill_form $fdf_fn output - ");
             unlink($fdf_fn);
-            exit();
+            
             }
         else
             {
