@@ -18,7 +18,7 @@
  * NOTE: If you change these, also change the error_reporting() code below
  *
  */
-	
+	define('ENVIRONMENT', 'development');
 /*
  *---------------------------------------------------------------
  * ERROR REPORTING
@@ -28,21 +28,23 @@
  * By default development will show errors but testing and live will hide them.
  */
 
-if (isset($_SERVER['PLATFORM']))
-    {
-    switch ($_SERVER['PLATFORM'])
-        {
+if (defined('ENVIRONMENT'))
+{
+	switch (ENVIRONMENT)
+	{
+		case 'development':
+			error_reporting(E_ALL);
+		break;
+	
+		case 'testing':
+		case 'production':
+			error_reporting(0);
+		break;
 
-        case 'PAGODA':
-            define('ENVIRONMENT', 'production');
-            break;
-// add additional cases for more environments
-        }
-    }
-else
-    {
-    define('ENVIRONMENT', 'development');
-    }
+		default:
+			exit('The application environment is not set correctly.');
+	}
+}
 
 /*
  *---------------------------------------------------------------
